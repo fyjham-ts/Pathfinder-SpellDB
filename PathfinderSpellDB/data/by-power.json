@@ -1,0 +1,83 @@
+{
+  "domain": {
+    "ambition ": [ "blind-ambition", "competitive-edge" ],
+    "air": [ "pushing-gust", "walk-on-air" ],
+    "cities": [ "face-in-the-crowd", "watching-the-watchers" ],
+    "confidence": [ "veil-of-confidence", "delusional-pride" ],
+    "creation": [ "fabricate", "artistic-flourish" ],
+    "darkness": [ "touch-of-shadows", "darkened-eyes" ],
+    "death": [ "undead-s-bane", "death-s-call" ],
+    "destruction": [ "destructive-cry", "destructive-aura" ],
+    "dreams": [ "sweet-dreams", "dreaming-potential" ],
+    "earth": [ "hurtling-stone", "localized-quake" ],
+    "family": [ "soothing-words", "unity" ],
+    "fate": [ "read-fate", "tempt-fate" ],
+    "fire": [ "fire-ray", "flame-barrier" ],
+    "freedom": [ "unimpeded-stride", "word-of-freedom" ],
+    "healing": [ "healer-s-blessing", "healing-font" ],
+    "indulgence": [ "enhance-victuals", "take-its-course" ],
+    "knowledge": [ "lorekeeper-s-fortune", "know-the-enemy" ],
+    "light": [ "undead-s-bane", "dazzling-flash" ],
+    "luck": [ "bit-of-luck", "lucky-break" ],
+    "magic": [ "divine-vessel", "mystic-beacon" ],
+    "might": [ "athletic-exploit", "enduring-might" ],
+    "moon": [ "moonlight-glow", "moonbeam" ],
+    "nature": [ "skin-of-thorns", "nature-s-bounty" ],
+    "nightmares": [ "waking-nightmare", "echoing-nightmare" ],
+    "pain": [ "savor-the-sting", "retributive-pain" ],
+    "passion": [ "charming-touch", "captivating-adoration" ],
+    "perfection": [ "perfected-mind", "perfected-form" ],
+    "protection": [ "divine-ward", "protective-aura" ],
+    "secrecy": [ "forced-quiet", "safeguard-secret" ],
+    "travel": [ "agile-feet", "wanderer-s-guide" ],
+    "trickery": [ "sudden-shift", "master-s-illusion" ],
+    "truth": [ "word-of-truth", "glimpse-the-truth" ],
+    "tyranny": [ "touch-of-obedience", "commanding-lash" ],
+    "undeath": [ "unlife-s-blessing", "touch-of-undeath" ],
+    "water": [ "tidal-surge", "downpour" ],
+    "wealth": [ "acquisitive-s-fortune", "money-talks" ],
+    "zeal": [ "weapon-surge", "prepare-for-battle" ]
+  },
+  "champion": {
+    "paladin": [
+      "lay-on-hands",
+      "litany-against-wrath",
+      "litany-against-sloth",
+      "paladin-s-sacrifice",
+      "litany-of-righteousness",
+      "hero-s-defiance"
+    ]
+  },
+  "bloodline": {
+    "aberant": [ "tentacular-limbs", "aberrant-whispers", "unusual-anatomy" ],
+    "angelic": [ "angelic-halo", "angelic-wings", "celestial-brand" ],
+    "demonic": [ "glutton-s-jaws", "swamp-of-sloth", "abyssal-wrath" ],
+    "draconic": [ "dragon-claws", "dragon-breath", "dragon-wings" ],
+    "fey": [ "faerie-dust", "fey-disappearance", "ridiculous-notion" ],
+    "imperial": [ "ancestral-surge", "metamagician-s-shortcut", "arcane-countermeasure" ]
+  },
+  "school": {
+    "abjuration": [ "protective-ward", "energy-absorption" ],
+    "conjuration": [ "augment-summoning", "dimensional-steps" ],
+    "diviniation": [ "diviner-s-sight", "vigilant-eye" ],
+    "enchantment": [ "charming-words", "dread-aura" ],
+    "evocation": [ "force-bolt", "elemental-tempest" ],
+    "illusion": [ "warped-terrain", "invisibility-cloak" ],
+    "necromancy": [ "call-of-the-grave", "life-siphon" ],
+    "transmutation": ["physical-boost", "shifting-form"],
+    "universalist": [ "hand-of-the-apprentice" ]
+  },
+  "composition": {
+    "cantrips": [ "allegro", "dirge-of-doom", "house-of-imaginary-walls", "inspire-competence", "triple-time" ],
+    "powers": [ "counter-performance", "lingering-composition", "loremaster-s-recall", "harmonize", "inspire-heroics", "soothing-ballad", "fatal-aria" ]
+  },
+  "order": {
+    "animal": [ "heal-animal" ],
+    "leaf": [ "goodberry" ],
+    "storm": [ "tempest-surge", "thunder-shield", "storm-lord", "stormwind-flight" ],
+    "wild": [ "wild-claws" ]
+  },
+  "ki": {
+    "monk": [ "ki-strike", "wholeness-of-body", "ki-blast", "dimensional-steps", "wild-winds-stance", "wind-jump", "wild-winds-gust", "quivering-palm", "empty-body" ]
+  }
+}

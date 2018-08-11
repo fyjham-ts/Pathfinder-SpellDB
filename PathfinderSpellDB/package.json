@@ -1,0 +1,29 @@
+{
+  "name": "playtestspelldb",
+  "version": "0.1.0",
+  "description": "Pathfinder Playtest SpellDB",
+  "main": "app.js",
+  "author": {
+    "name": "Tim Schneider"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "bootstrap": "^4.1.3",
+    "electron-builder": "^20.27.1",
+    "electron-debug": "^2.0.0",
+    "immutability-helper": "^2.7.1",
+    "react": "^15.3.2",
+    "react-checkbox-group": "^4.0.1",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "electron": "^2.0.6",
+    "electron-packager": "^12.1.0",
+    "electron-winstaller": "^2.6.4"
+  },
+  "scripts": {
+    "build-installer": "node setup\\BuildInstaller.js"
+  }
+}

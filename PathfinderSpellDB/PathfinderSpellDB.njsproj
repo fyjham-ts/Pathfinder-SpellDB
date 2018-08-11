@@ -1,0 +1,92 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>PathfinderSpellDB</Name>
+    <RootNamespace>PathfinderSpellDB</RootNamespace>
+    <NodeExePath>node_modules\electron\dist\electron.exe</NodeExePath>
+    <NodeExeArguments>.</NodeExeArguments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>08e3fddf-becf-4dfa-aff8-98a05bb579b9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include=".babelrc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="scripts\main.js" />
+    <Compile Include="scripts\SpellLoader.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="setup\BuildInstaller.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\SpellDetail.jsx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\SpellListItem.jsx" />
+    <Compile Include="views\SpellSearch.jsx" />
+    <Compile Include="views\SpellList.jsx">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults">
+      <SubType>Content</SubType>
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
+    <Content Include="data\by-power.json" />
+    <Content Include="data\by-list.json" />
+    <Content Include="data\spells.json">
+      <Publish>False</Publish>
+    </Content>
+    <Content Include="images\icons\action.png" />
+    <Content Include="images\icons\Free.png" />
+    <Content Include="images\icons\Reaction.png" />
+    <Content Include="index.html" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="styles\style.css">
+      <SubType>Content</SubType>
+      <DependentUpon>styles\style.scss</DependentUpon>
+    </Content>
+    <Content Include="styles\style.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>styles\style.css</DependentUpon>
+    </Content>
+    <Content Include="styles\style.scss">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="images\" />
+    <Folder Include="images\icons\" />
+    <Folder Include="setup\" />
+    <Folder Include="views\" />
+    <Folder Include="scripts\" />
+    <Folder Include="styles\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
