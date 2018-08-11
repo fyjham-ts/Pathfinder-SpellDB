@@ -24,6 +24,14 @@
     "electron-winstaller": "^2.6.4"
   },
   "scripts": {
-    "build-installer": "node setup\\BuildInstaller.js"
+    "build-installer": "node setup\\BuildInstaller.js",
+    "build-release": "node setup\\BuildRelease.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fyjham-ts/Pathfinder-SpellDB.git"
+  },
+  "build": {
+    "publish": [ "github" ]
   }
 }

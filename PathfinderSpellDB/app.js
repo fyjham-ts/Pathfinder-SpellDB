@@ -5,6 +5,8 @@ function handleStartupEvent() {
         return false;
     }
     const path = require('path');
+    const rootAtomFolder = path.resolve(appFolder, '..');
+    const updateDotExe = path.resolve(path.join(rootAtomFolder, 'Update.exe'));
     const exeName = path.basename(process.execPath);
 
     const spawn = function (command, args) {

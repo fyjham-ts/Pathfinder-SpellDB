@@ -41,9 +41,8 @@ export default class SpellList extends React.Component {
             if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName) == -1) return false;
         }
         if (this.state.criteria.powerType) {
-            if (this.state.criteria.powerType == "Spells") {
-                if (spell.type.toLowerCase() != "spell") return false;
-            } else if (this.state.criteria.powerType == "None") {
+            // Special "None" option - this is used when reviewing if a spell isn't classified.
+            if (this.state.criteria.powerType == "None") {
                 if (spell.type.toLowerCase() == "spell" || spell.powers.length > 0) return false;
             }else {
                 if (spell.powers.filter((p) => {
