@@ -4,7 +4,11 @@ function handleStartupEvent() {
     if (process.platform !== 'win32') {
         return false;
     }
+
+    const ChildProcess = require('child_process');
     const path = require('path');
+
+    const appFolder = path.resolve(process.execPath, '..');
     const rootAtomFolder = path.resolve(appFolder, '..');
     const updateDotExe = path.resolve(path.join(rootAtomFolder, 'Update.exe'));
     const exeName = path.basename(process.execPath);
@@ -54,6 +58,20 @@ if (!handleStartupEvent()) {
             },
             { 'role': 'reload' },
             { 'role': 'toggleDevTools' },
+            {
+                'label': 'About',
+                'click'(item, win) {
+                    let aboutWindow = new BrowserWindow({
+                        width: 600,
+                        height: 400,
+                        webPreferences: {
+                            nodeIntegration: true
+                        },
+                        autoHideMenuBar: true
+                    })
+                    aboutWindow.loadFile('about.html')
+                }
+            },
             { 'role': 'close' }
         ]
     }];

@@ -63,6 +63,7 @@
     <Content Include="images\icons\action.png" />
     <Content Include="images\icons\Free.png" />
     <Content Include="images\icons\Reaction.png" />
+    <Content Include="about.html" />
     <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="styles\style.css">
