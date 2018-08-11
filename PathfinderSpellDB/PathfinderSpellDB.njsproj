@@ -65,7 +65,6 @@
     <Content Include="images\icons\Reaction.png" />
     <Content Include="index.html" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="styles\style.css">
       <SubType>Content</SubType>
       <DependentUpon>styles\style.scss</DependentUpon>
