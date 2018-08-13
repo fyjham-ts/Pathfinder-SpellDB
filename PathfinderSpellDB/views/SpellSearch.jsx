@@ -12,7 +12,7 @@ export default class SpellSearch extends React.Component {
 
     }
     handleLevelChange(newLevels) {
-        if (newLevels.indexOf('x') != -1) this.props.onCriteriaChange('levels', []);
+        if (newLevels.indexOf('x') != -1) this.props.onCriteriaReset();
         else this.props.onCriteriaChange('levels', newLevels);
     }
     handleCriteriaChange(event) {

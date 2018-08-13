@@ -1,6 +1,6 @@
 {
   "name": "playtestspelldb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Pathfinder Playtest SpellDB",
   "main": "app.js",
   "author": {
@@ -12,6 +12,8 @@
     "babel-register": "^6.3.13",
     "bootstrap-css-only": "^4.1.1",
     "electron-debug": "^2.0.0",
+    "electron-log": "^2.2.16",
+    "electron-updater": "^3.1.1",
     "immutability-helper": "^2.7.1",
     "react": "^15.3.2",
     "react-checkbox-group": "^4.0.1",

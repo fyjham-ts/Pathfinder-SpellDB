@@ -1,4 +1,9 @@
 const { app, BrowserWindow, Menu } = require('electron');
+const log = require('electron-log');
+const { autoUpdater } = require("electron-updater");
+
+autoUpdater.logger = log;
+autoUpdater.logger.transports.file.level = 'info';
 
 function handleStartupEvent() {
     if (process.platform !== 'win32') {
@@ -102,5 +107,8 @@ if (!handleStartupEvent()) {
         if (mainWindow === null) {
             createWindow()
         }
+    });
+    app.on('ready', function () {
+        autoUpdater.checkForUpdatesAndNotify();
     });
 }

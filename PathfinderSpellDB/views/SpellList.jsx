@@ -10,6 +10,16 @@ import { loadSpellData } from '../scripts/SpellLoader.js';
 let { spells, powerTypes, powerOptions } = loadSpellData();
 
 var defaultMaxRows = 50;
+var getDefaultCriteria = () => {
+    return {
+        'spellName': '',
+        'powerType': '',
+        'powerOption': '',
+        'sortBy': 'Level',
+        'displayMode': 'List',
+        'levels': []
+    }
+};
 
 export default class SpellList extends React.Component {
     constructor(props) {
@@ -17,16 +27,11 @@ export default class SpellList extends React.Component {
         this.state = {
             spells: spells,
             maxRows: defaultMaxRows,
-            criteria: {
-                'spellName': '',
-                'powerType': '',
-                'powerOption': '',
-                'sortBy': 'Level',
-                'displayMode': 'List',
-                'levels': []
-            },
+            criteria: getDefaultCriteria(),
             selectedSpell: null
         };
+
+        this.criteriaReset = this.criteriaReset.bind(this);
         this.criteriaChange = this.criteriaChange.bind(this);
         this.criteriaSort = this.criteriaSort.bind(this);
         this.meetsCriteria = this.meetsCriteria.bind(this);
@@ -58,6 +63,13 @@ export default class SpellList extends React.Component {
     selectSpell(spell) {
         this.setState({
             selectedSpell: spell
+        })
+    }
+    criteriaReset() {
+        var newCriteria = getDefaultCriteria();
+        newCriteria.displayMode = this.state.criteria.displayMode;
+        this.setState({
+            criteria: newCriteria
         })
     }
     criteriaChange(name, value) {
@@ -121,7 +133,8 @@ export default class SpellList extends React.Component {
                             levels={this.state.criteria.levels}
                             displayMode={this.state.criteria.displayMode}
                             showDetails={this.state.criteria.showDetails}
-                            onCriteriaChange={this.criteriaChange} />
+                            onCriteriaChange={this.criteriaChange}
+                            onCriteriaReset={this.criteriaReset} />
                     </div>
                 </div>
                 <div className="row">
