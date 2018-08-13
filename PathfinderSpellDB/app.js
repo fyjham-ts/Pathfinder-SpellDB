@@ -72,9 +72,12 @@ if (!handleStartupEvent()) {
                         webPreferences: {
                             nodeIntegration: true
                         },
-                        autoHideMenuBar: true
+                        autoHideMenuBar: false
                     })
-                    aboutWindow.loadFile('about.html')
+                    aboutWindow.loadFile('about.html');
+                    aboutWindow.webContents.on("did-finish-load", () => {
+                        aboutWindow.webContents.send('version', app.getVersion());
+                    });
                 }
             },
             { 'role': 'close' }
