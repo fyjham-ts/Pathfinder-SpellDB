@@ -12,6 +12,7 @@
 
 # Build results
 installer/
+dist/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/

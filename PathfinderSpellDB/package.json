@@ -10,8 +10,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.3.13",
-    "bootstrap": "^4.1.3",
-    "electron-builder": "^20.27.1",
+    "bootstrap-css-only": "^4.1.1",
     "electron-debug": "^2.0.0",
     "immutability-helper": "^2.7.1",
     "react": "^15.3.2",
@@ -20,18 +19,19 @@
   },
   "devDependencies": {
     "electron": "^2.0.6",
+    "electron-builder": "^20.27.1",
     "electron-packager": "^12.1.0",
     "electron-winstaller": "^2.6.4"
   },
   "scripts": {
     "build-installer": "node setup\\BuildInstaller.js",
-    "build-release": "node setup\\BuildRelease.js"
+    "build": "node setup\\Build.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/fyjham-ts/Pathfinder-SpellDB.git"
   },
   "build": {
-    "publish": [ "github" ]
+    "appId": "playtestspelldb"
   }
 }

@@ -38,7 +38,7 @@
     <Compile Include="scripts\SpellLoader.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="setup\BuildRelease.js" />
+    <Compile Include="setup\Build.js" />
     <Compile Include="setup\BuildInstaller.js">
       <SubType>Code</SubType>
     </Compile>
