@@ -34,18 +34,20 @@
     <Compile Include=".babelrc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="scripts\update.js" />
     <Compile Include="scripts\main.js" />
     <Compile Include="scripts\SpellLoader.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="setup\BuildNoPublish.js" />
     <Compile Include="setup\Build.js" />
-    <Compile Include="setup\BuildInstaller.js">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="views\SpellDetail.jsx">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="views\SpellListItem.jsx" />
+    <Compile Include="views\ProgressBar.jsx" />
+    <Compile Include="views\Update\UpdateDetails.jsx" />
+    <Compile Include="views\Update\UpdateCheck.jsx" />
     <Compile Include="views\SpellSearch.jsx" />
     <Compile Include="views\SpellList.jsx">
       <SubType>Code</SubType>
@@ -64,6 +66,7 @@
     <Content Include="images\icons\Free.png" />
     <Content Include="images\icons\Reaction.png" />
     <Content Include="about.html" />
+    <Content Include="update.html" />
     <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="styles\style.css">
@@ -86,6 +89,7 @@
     <Folder Include="views\" />
     <Folder Include="scripts\" />
     <Folder Include="styles\" />
+    <Folder Include="views\Update\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

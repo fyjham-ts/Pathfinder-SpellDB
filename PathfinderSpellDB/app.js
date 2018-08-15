@@ -1,9 +1,12 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const log = require('electron-log');
 const { autoUpdater } = require("electron-updater");
+const isDev = require('electron-is-dev');
+
 
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
+autoUpdater.autoDownload = false;
 
 function handleStartupEvent() {
     if (process.platform !== 'win32') {
@@ -62,6 +65,7 @@ if (!handleStartupEvent()) {
                 }
             },
             { 'role': 'reload' },
+            { 'type': 'separator' },
             { 'role': 'toggleDevTools' },
             {
                 'label': 'About',
@@ -72,7 +76,7 @@ if (!handleStartupEvent()) {
                         webPreferences: {
                             nodeIntegration: true
                         },
-                        autoHideMenuBar: false
+                        autoHideMenuBar: !isDev
                     })
                     aboutWindow.loadFile('about.html');
                     aboutWindow.webContents.on("did-finish-load", () => {
@@ -80,6 +84,49 @@ if (!handleStartupEvent()) {
                     });
                 }
             },
+            {
+                'label': 'Check For Updates',
+                'click'(item, win) {
+                    let versionWindow = new BrowserWindow({
+                        width: 600,
+                        height: 400,
+                        webPreferences: {
+                            nodeIntegration: true
+                        },
+                        autoHideMenuBar: !isDev
+                    })
+                    versionWindow.loadFile('update.html');
+                    versionWindow.webContents.on("did-finish-load", () => {
+                        versionWindow.webContents.send("version", app.getVersion());
+                        if (!isDev) {
+                            autoUpdater.checkForUpdates().then((r) => {
+                                versionWindow.webContents.send("update-info", r.updateInfo);
+                            }, (r) => {
+                                versionWindow.webContents.send("update-error", r);
+                            });
+                        } else {
+                            setTimeout(() => {
+                                versionWindow.webContents.send("update-info", {
+                                    'version': app.getVersion(),
+                                    'releaseNotes': "Detected development mode - pretending to be latest\n\nIf you're not developing something very bad has happened!",
+                                    'releaseDate': '2018-05-01T15:29:31.000Z'
+                                });
+                            }, 3000);
+                        }
+                        versionWindow.webContents.on("start-download", () => {
+                            autoUpdater.downloadUpdate().then(() => {
+                                versionWindow.webContents.send("update-downloaded");
+                            });
+                        });
+                        versionWindow.webContents.on("start-download-restart", () => {
+                            autoUpdater.downloadUpdate().then(() => {
+                                setImmediate(() => autoUpdater.quitAndInstall());
+                            });
+                        });
+                    });
+                }
+            },
+            { 'type': 'separator' },
             { 'role': 'close' }
         ]
     }];
@@ -100,18 +147,15 @@ if (!handleStartupEvent()) {
         mainWindow.on('closed', function () { mainWindow = null });
     });
 
-    app.on('window-all-closed', function () {
-        if (process.platform !== 'darwin') {
-            app.quit()
-        }
-    });
-
     app.on('activate', function () {
         if (mainWindow === null) {
             createWindow()
         }
     });
-    app.on('ready', function () {
-        autoUpdater.checkForUpdatesAndNotify();
+
+    app.on('window-all-closed', function () {
+        if (process.platform !== 'darwin') {
+            app.quit()
+        }
     });
 }
