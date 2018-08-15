@@ -78,26 +78,7 @@ if (!handleStartupEvent()) {
                     win.setAlwaysOnTop(item.checked);
                 }
             },
-            { 'role': 'reload' },
             { 'type': 'separator' },
-            { 'role': 'toggleDevTools' },
-            {
-                'label': 'About',
-                'click'(item, win) {
-                    let aboutWindow = new BrowserWindow({
-                        width: 600,
-                        height: 400,
-                        webPreferences: {
-                            nodeIntegration: true
-                        },
-                        autoHideMenuBar: !isDev
-                    })
-                    aboutWindow.loadFile('about.html');
-                    aboutWindow.webContents.on("did-finish-load", () => {
-                        aboutWindow.webContents.send('version', app.getVersion());
-                    });
-                }
-            },
             {
                 'label': 'Check For Updates',
                 'click'(item, win) {
@@ -128,6 +109,23 @@ if (!handleStartupEvent()) {
                             }, 3000);
                         }
                     });
+                }
+            },
+            { 'role': 'reload' },
+            { 'role': 'toggleDevTools' },
+            { 'type': 'separator' },
+            {
+                'label': 'About',
+                'click'(item, win) {
+                    let aboutWindow = new BrowserWindow({
+                        width: 600,
+                        height: 400,
+                        webPreferences: {
+                            nodeIntegration: true
+                        },
+                        autoHideMenuBar: !isDev
+                    })
+                    aboutWindow.loadFile('about.html');
                 }
             },
             { 'type': 'separator' },
