@@ -53,7 +53,7 @@ export default class UpdateDetails extends React.PureComponent {
                         <div className="col">{moment(this.props.latest.releaseDate).format('Do MMM YYYY')}</div>
                     </div>
                     <div><label>Release Notes</label></div>
-                    <div style={{whiteSpace:"pre-wrap"}}>{this.props.latest.releaseNotes}</div>
+                    <div style={{whiteSpace:"pre-wrap"}}>{this.props.latest.releaseNotes.replace(/<(?:.|\n)*?>/gm, '')}</div>
                 </div>
             </div>
         )
