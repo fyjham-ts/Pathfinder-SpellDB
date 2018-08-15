@@ -2,11 +2,24 @@ const { app, BrowserWindow, Menu } = require('electron');
 const log = require('electron-log');
 const { autoUpdater } = require("electron-updater");
 const isDev = require('electron-is-dev');
-
+const { ipcMain } = require('electron')
 
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
 autoUpdater.autoDownload = false;
+
+ipcMain.on("start-download", (ev) => {
+    autoUpdater.downloadUpdate().then(() => {
+        log.log("Download complete event - sending back to window");
+        ev.sender.send("update-downloaded");
+    });
+});
+ipcMain.on("start-download-restart", () => {
+    autoUpdater.downloadUpdate().then(() => {
+        log.log("Download complete event - quitting and restarting");
+        setImmediate(() => autoUpdater.quitAndInstall());
+    });
+});
 
 function handleStartupEvent() {
     if (process.platform !== 'win32') {
@@ -51,6 +64,7 @@ function handleStartupEvent() {
             return true;
     }
 };
+
 
 if (!handleStartupEvent()) {
     const menuTemplate = [{
@@ -113,16 +127,6 @@ if (!handleStartupEvent()) {
                                 });
                             }, 3000);
                         }
-                        versionWindow.webContents.on("start-download", () => {
-                            autoUpdater.downloadUpdate().then(() => {
-                                versionWindow.webContents.send("update-downloaded");
-                            });
-                        });
-                        versionWindow.webContents.on("start-download-restart", () => {
-                            autoUpdater.downloadUpdate().then(() => {
-                                setImmediate(() => autoUpdater.quitAndInstall());
-                            });
-                        });
                     });
                 }
             },

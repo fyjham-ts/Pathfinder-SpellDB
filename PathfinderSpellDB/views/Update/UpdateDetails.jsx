@@ -43,11 +43,11 @@ export default class UpdateDetails extends React.PureComponent {
                             </div>
                         }
                     })()}
-                    {this.props.downloadStarted && !this.props.downloadCompleted && <div>
+                    {this.props.downloadStarted && !this.props.downloadComplete && <div>
                         <ProgressBar label="Downloading update..." />
                         <i>You can close this window - the update will continue in the background</i>
                     </div>}
-                    {this.props.downloadCompleted && <div className="alert alert-success">The new version has been downloaded. It will automatically install when you next restart.</div>}
+                    {this.props.downloadComplete && <div className="alert alert-success">The new version has been downloaded. It will automatically install when you next restart.</div>}
                     <div className="row">
                         <div className="col"><label>Date Released</label></div>
                         <div className="col">{moment(this.props.latest.releaseDate).format('Do MMM YYYY')}</div>

@@ -23,8 +23,8 @@ export default class UpdateCheck extends React.Component {
     onStartDownload(autoRestart) {
         var self = this;
 
-        if (autoRestart) ipcRenderer.emit("start-download-restart");
-        else ipcRenderer.emit("start-download");
+        if (autoRestart) ipcRenderer.send("start-download-restart");
+        else ipcRenderer.send("start-download");
         this.setState({
             downloadStarted: true,
             autoRestart: autoRestart
