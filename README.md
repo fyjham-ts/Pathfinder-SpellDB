@@ -1,9 +1,24 @@
-﻿# Pathfinder SpellDB
+﻿
+# Pathfinder Spell DB
+
 This was created for my own personal use - if you have some fun with it that's great!
 
-It is not yet ready for general use - I have uploaded to GitHub early to try and get electron-updating connected.
+It allows you to search & find spells and powers across different classes quickly and easily.
 
-Spell data originally sourced from [PF2e Spell Finder](https://github.com/spellfinder/spells) plus some additional data I entered to support extra search options. Much respect to the original app, I just wanted a stand-alone offline app. Without his work on the spell data I'd never have made this.
+![Sample Screenshot](https://github.com/fyjham-ts/Pathfinder-SpellDB/raw/master/SampleImage.png)
+
+# Credit
+[Paizo](http://www.paizo.com) as the makers of Pathfinder are ultimately the source of all the information in this application.
+
+Spell data originally sourced from [PF2e Spell Finder](https://github.com/spellfinder/spells) - though I've made some additions. Much respect to the original app, I just wanted a stand-alone offline app. Without his work on the spell data I'd never have made this.
+
+# Installing
+
+Just go to the [Latest Release](https://github.com/fyjham-ts/Pathfinder-SpellDB/releases/latest) page and download the setup executable. This will install the application.
+
+## Unrecognised App Warnings?
+
+You may get a warning installing from Windows that the Publisher is unknown. This is simply because I haven't paid money for a code signing certificate for a hobby project. You'll have to ignore the warning to install. The full source code is all here I'm hiding nothing.
 
 # Licensing?
 I'm not a lawyer, I'm acting on a belief the data itself is licensed under the OGL (See license).
