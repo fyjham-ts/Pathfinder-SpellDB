@@ -1,26 +1,11 @@
 const { app, BrowserWindow, Menu } = require('electron');
-const log = require('electron-log');
-const { autoUpdater } = require("electron-updater");
-const isDev = require('electron-is-dev');
-const { ipcMain } = require('electron')
+const updateManager = require("./node/updateManager");
+const menus = require("./node/menus");
 
-autoUpdater.logger = log;
-autoUpdater.logger.transports.file.level = 'info';
-autoUpdater.autoDownload = false;
+updateManager.init();
 
-ipcMain.on("start-download", (ev) => {
-    autoUpdater.downloadUpdate().then(() => {
-        log.log("Download complete event - sending back to window");
-        ev.sender.send("update-downloaded");
-    });
-});
-ipcMain.on("start-download-restart", () => {
-    autoUpdater.downloadUpdate().then(() => {
-        log.log("Download complete event - quitting and restarting");
-        setImmediate(() => autoUpdater.quitAndInstall());
-    });
-});
-
+// TODO: Do we need this? I think this may be a leftover from trying to use electron-installer instead of electron build...
+// Needs debugging to remove.
 function handleStartupEvent() {
     if (process.platform !== 'win32') {
         return false;
@@ -67,76 +52,11 @@ function handleStartupEvent() {
 
 
 if (!handleStartupEvent()) {
-    const menuTemplate = [{
-        'label': 'File',
-        'submenu': [
-            {
-                'label': 'Always on top',
-                'type': 'checkbox',
-                'checked': false,
-                'click'(item, win) {
-                    win.setAlwaysOnTop(item.checked);
-                }
-            },
-            { 'type': 'separator' },
-            {
-                'label': 'Check For Updates',
-                'click'(item, win) {
-                    let versionWindow = new BrowserWindow({
-                        width: 600,
-                        height: 400,
-                        webPreferences: {
-                            nodeIntegration: true
-                        },
-                        autoHideMenuBar: !isDev
-                    })
-                    versionWindow.loadFile('update.html');
-                    versionWindow.webContents.on("did-finish-load", () => {
-                        versionWindow.webContents.send("version", app.getVersion());
-                        if (!isDev) {
-                            autoUpdater.checkForUpdates().then((r) => {
-                                versionWindow.webContents.send("update-info", r.updateInfo);
-                            }, (r) => {
-                                versionWindow.webContents.send("update-error", r);
-                            });
-                        } else {
-                            setTimeout(() => {
-                                versionWindow.webContents.send("update-info", {
-                                    'version': app.getVersion(),
-                                    'releaseNotes': "Detected development mode - pretending to be latest\n\nIf you're not developing something very bad has happened!",
-                                    'releaseDate': '2018-05-01T15:29:31.000Z'
-                                });
-                            }, 3000);
-                        }
-                    });
-                }
-            },
-            { 'role': 'reload' },
-            { 'role': 'toggleDevTools' },
-            { 'type': 'separator' },
-            {
-                'label': 'About',
-                'click'(item, win) {
-                    let aboutWindow = new BrowserWindow({
-                        width: 600,
-                        height: 400,
-                        webPreferences: {
-                            nodeIntegration: true
-                        },
-                        autoHideMenuBar: !isDev
-                    })
-                    aboutWindow.loadFile('about.html');
-                }
-            },
-            { 'type': 'separator' },
-            { 'role': 'close' }
-        ]
-    }];
 
     let mainWindow;
 
     app.on('ready', function createWindow() {
-        const menu = Menu.buildFromTemplate(menuTemplate);
+        const menu = Menu.buildFromTemplate(menus.mainMenuTemplate);
         Menu.setApplicationMenu(menu);
         mainWindow = new BrowserWindow({
             width: 800,

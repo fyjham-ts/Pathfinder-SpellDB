@@ -48,6 +48,7 @@ export default class SpellDetail extends React.PureComponent {
         if (spell.targets) headerTokens.push({ 'title': 'Targets', 'value': spell.targets });
         if (spell.duration) headerTokens.push({ 'title': 'Duration', 'value': spell.duration });
         if (spell.cost) headerTokens.push({ 'title': 'Cost', 'value': spell.cost });
+        if (spell.target) headerTokens.push({ 'title': 'Target', 'value': spell.target });
 
         var bodySections = [];
         bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description.main.replace(/ [-•] /g, '<br/> - ') });

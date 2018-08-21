@@ -6694,3 +6694,52 @@ a.text-dark:focus, a.text-dark:hover {
 .upgradeDetails label {
   font-weight: bold; }
 
+.quickRefs {
+  display: flex;
+  flex-wrap: wrap; }
+  .quickRefs .tile {
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    padding: 25px 0;
+    margin: 10px;
+    cursor: pointer; }
+    .quickRefs .tile:hover {
+      background: #DDD; }
+    .quickRefs .tile .icon {
+      font-size: 3em; }
+
+.dcTable thead th {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 64px;
+  text-align: center;
+  border-bottom: 1px; }
+  .dcTable thead th.level {
+    width: 80px; }
+
+.dcTable tbody tr:nth-child(2n+1) th, .dcTable tbody tr:nth-child(2n+1) td {
+  background: #DDD; }
+
+.dcTable tbody tr.selected th, .dcTable tbody tr.selected td {
+  background: #FFFF00; }
+
+.dcTable tbody tr th {
+  text-align: right;
+  padding-right: 10px; }
+
+.dcTable tbody tr td {
+  text-align: center; }
+
+.dcTable tbody tr td, .dcTable tbody tr th {
+  border: 3px solid white; }
+
+.conditions {
+  padding: 15px 0; }
+  .conditions .card-body {
+    padding: 0.5rem; }
+

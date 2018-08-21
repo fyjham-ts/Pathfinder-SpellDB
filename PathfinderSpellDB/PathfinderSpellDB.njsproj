@@ -34,6 +34,13 @@
     <Compile Include=".babelrc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="node\menus.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="node\conditions.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="scripts\quickreference.js" />
     <Compile Include="scripts\update.js" />
     <Compile Include="scripts\main.js" />
     <Compile Include="scripts\SpellLoader.js">
@@ -41,6 +48,15 @@
     </Compile>
     <Compile Include="setup\BuildNoPublish.js" />
     <Compile Include="setup\Build.js" />
+    <Compile Include="node\updateManager.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\QuickReference\Conditions.jsx" />
+    <Compile Include="views\QuickReference\QuickReferenceTile.jsx" />
+    <Compile Include="views\QuickReference\QuickReference.jsx" />
+    <Compile Include="views\QuickReference\DcTable.jsx">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="views\SpellDetail.jsx">
       <SubType>Code</SubType>
     </Compile>
@@ -66,6 +82,10 @@
     <Content Include="images\icons\Free.png" />
     <Content Include="images\icons\Reaction.png" />
     <Content Include="about.html" />
+    <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="quickref.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="update.html" />
     <Content Include="index.html" />
     <Content Include="package.json" />
@@ -85,10 +105,14 @@
     <Folder Include="data\" />
     <Folder Include="images\" />
     <Folder Include="images\icons\" />
+    <Folder Include="node\" />
+    <Folder Include="node_modules\font-awesome\" />
+    <Folder Include="node_modules\font-awesome\fonts\" />
     <Folder Include="setup\" />
     <Folder Include="views\" />
     <Folder Include="scripts\" />
     <Folder Include="styles\" />
+    <Folder Include="views\QuickReference\" />
     <Folder Include="views\Update\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
