@@ -40,7 +40,7 @@
     <Compile Include="node\conditions.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="scripts\quickreference.js" />
+    <Compile Include="scripts\QuickReference.js" />
     <Compile Include="scripts\update.js" />
     <Compile Include="scripts\main.js" />
     <Compile Include="scripts\SpellLoader.js">
@@ -106,6 +106,7 @@
     <Folder Include="images\" />
     <Folder Include="images\icons\" />
     <Folder Include="node\" />
+    <Folder Include="node_modules\" />
     <Folder Include="node_modules\font-awesome\" />
     <Folder Include="node_modules\font-awesome\fonts\" />
     <Folder Include="setup\" />
