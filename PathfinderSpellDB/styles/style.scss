@@ -21,7 +21,13 @@ $darkGreen: #3e4f54;
         .spellClass {
             display: inline-block;
             float: right;
-
+            .bookmark {
+                display: inline-block;
+                padding: 0 10px 0 0;
+                &.active {
+                    color: purple;
+                }
+            }
             .level {
                 display: inline-block;
                 color: white;
@@ -275,4 +281,18 @@ $darkGreen: #3e4f54;
 .conditions {
     padding: 15px 0;
     .card-body { padding: 0.5rem;}
+}
+
+.spellListTable {
+    .spellListRow {
+        a.activeList {
+            &, &:hover {
+                color: #e7711b;
+            }
+        }
+
+        .btn-danger i {
+            color: white;
+        }
+    }
 }

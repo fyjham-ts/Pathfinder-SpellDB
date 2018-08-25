@@ -43,17 +43,34 @@ var menuItems = {
                     nodeIntegration: true
                 }
             });
-            quickRefWindow.setMenu(Menu.buildFromTemplate(quickRefMenuTemplate));
+            quickRefWindow.setMenu(Menu.buildFromTemplate(genericMenuTemplate));
             quickRefWindow.loadFile('quickref.html');
             quickRefWindow.on('closed', function () { quickRefWindow = null });
         }
+    },
+    'spellLists': {
+        'label': 'Bookmarked Spell Lists',
+        'click': function (item, win) {
+            let spellListWindow = new BrowserWindow({
+                width: 600,
+                height: 400,
+                webPreferences: {
+                    nodeIntegration: true
+                }
+            });
+            spellListWindow.setMenu(Menu.buildFromTemplate(genericMenuTemplate));
+            spellListWindow.loadFile('spelllists.html');
+            spellListWindow.on('closed', function () { spellListWindow = null });
+        }
     }
 };
-var quickRefMenuTemplate = [
+var genericMenuTemplate = [
     {
         'label': 'File',
         'submenu': [
             menuItems.alwaysOnTop,
+            { 'role': 'reload' },
+            { 'role': 'toggleDevTools' },
             { 'role': 'close' }
         ]
     }
@@ -76,7 +93,8 @@ var mainMenuTemplate = [
     }, {
         'label': 'Other',
         'submenu': [
-            menuItems.quickRef
+            menuItems.quickRef,
+            menuItems.spellLists
         ]
     }
 ];

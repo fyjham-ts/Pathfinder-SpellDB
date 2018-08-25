@@ -40,7 +40,13 @@
     <Compile Include="node\conditions.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="node\spellListManager.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="scripts\QuickReference.js" />
+    <Compile Include="scripts\SpellLists.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="scripts\update.js" />
     <Compile Include="scripts\main.js" />
     <Compile Include="scripts\SpellLoader.js">
@@ -62,6 +68,10 @@
     </Compile>
     <Compile Include="views\SpellListItem.jsx" />
     <Compile Include="views\ProgressBar.jsx" />
+    <Compile Include="views\SpellListManager\ConfigTableRow.jsx" />
+    <Compile Include="views\SpellListManager\ConfigTable.jsx">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="views\Update\UpdateDetails.jsx" />
     <Compile Include="views\Update\UpdateCheck.jsx" />
     <Compile Include="views\SpellSearch.jsx" />
@@ -83,6 +93,7 @@
     <Content Include="images\icons\Reaction.png" />
     <Content Include="about.html" />
     <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="spelllists.html" />
     <Content Include="quickref.html">
       <SubType>Code</SubType>
     </Content>
@@ -113,6 +124,7 @@
     <Folder Include="views\" />
     <Folder Include="scripts\" />
     <Folder Include="styles\" />
+    <Folder Include="views\SpellListManager\" />
     <Folder Include="views\QuickReference\" />
     <Folder Include="views\Update\" />
   </ItemGroup>

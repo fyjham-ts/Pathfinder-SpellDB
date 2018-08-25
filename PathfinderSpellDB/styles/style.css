@@ -6570,6 +6570,11 @@ a.text-dark:focus, a.text-dark:hover {
   .spellDetail .title .spellClass {
     display: inline-block;
     float: right; }
+    .spellDetail .title .spellClass .bookmark {
+      display: inline-block;
+      padding: 0 10px 0 0; }
+      .spellDetail .title .spellClass .bookmark.active {
+        color: purple; }
     .spellDetail .title .spellClass .level {
       display: inline-block;
       color: white;
@@ -6742,4 +6747,10 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 15px 0; }
   .conditions .card-body {
     padding: 0.5rem; }
+
+.spellListTable .spellListRow a.activeList, .spellListTable .spellListRow a.activeList:hover {
+  color: #e7711b; }
+
+.spellListTable .spellListRow .btn-danger i {
+  color: white; }
 

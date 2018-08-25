@@ -2,6 +2,13 @@
 
 import React from 'react';
 export default class SpellDetail extends React.PureComponent {
+    constructor(props) {
+        super(props);
+        this.toggleBookmark = this.toggleBookmark.bind(this);
+    }
+    toggleBookmark() {
+        this.props.onBookmark(this.props.spell);
+    }
     render() {
         var spell = this.props.spell;
         var casting = spell.casting.map((c) => {
@@ -78,7 +85,13 @@ export default class SpellDetail extends React.PureComponent {
         return (
             <div className="spellDetail clearfix">
                 <div className="title">
-                    <span className="spellClass">{spell.type}<span className={spell.type.toLowerCase() + " level"}>{spell.level}</span></span>
+                    <span className="spellClass">
+                        <span className={this.props.bookmarked ? "bookmark active" : "bookmark inactive"} onClick={this.toggleBookmark}>
+                            <i className={this.props.bookmarked ? "fas fa-bookmark" : "far fa-bookmark"} />
+                        </span>
+                        {spell.type}
+                        <span className={spell.type.toLowerCase() + " level"}>{spell.level}</span>
+                    </span>
                     {spell.name}
                 </div>
                 <ul className="traits">

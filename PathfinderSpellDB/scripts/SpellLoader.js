@@ -17,7 +17,7 @@
         var spell = rawSpells[s];
         spell.powers = [];
         for (var list in spellLists) {
-            if (spellLists[list].indexOf(s) != -1) spell.powers.push({ 'powerType': 'spell', 'powerOption': list });
+            if (spellLists[list].indexOf(s) != -1) spell.powers.push({ 'powerType': 'traditions', 'powerOption': list });
         }
         for (var powerType in spellPowers) {
             for (var powerOption in spellPowers[powerType]) {
@@ -27,9 +27,9 @@
         }
         spells.push(spell);
     }
-    powerTypes.push("spell");
-    powerOptions.spell = [];
-    for (var list in spellLists) powerOptions.spell.push(list);
+    powerTypes.push("traditions");
+    powerOptions.traditions = [];
+    for (var list in spellLists) powerOptions.traditions.push(list);
     for (var powerType in spellPowers) {
         powerTypes.push(powerType);
         powerOptions[powerType] = [];

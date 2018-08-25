@@ -1,8 +1,10 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const updateManager = require("./node/updateManager");
+const spellListManager = require("./node/spellListManager");
 const menus = require("./node/menus");
 
 updateManager.init();
+spellListManager.init();
 
 // TODO: Do we need this? I think this may be a leftover from trying to use electron-installer instead of electron build...
 // Needs debugging to remove.
