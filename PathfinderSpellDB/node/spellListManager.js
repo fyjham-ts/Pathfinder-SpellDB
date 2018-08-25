@@ -1,4 +1,5 @@
 ﻿const { ipcMain } = require('electron');
+const fs = require('fs');
 const storage = require('electron-json-storage');
 
 function uuidv4() {
@@ -38,6 +39,41 @@ class SpellListManager {
                     this._applyChanges(true, false);
                 }
                 else throw "Couldn't find list " + id;
+            });
+            ipcMain.on("spelllists-savespelllist", (ev, id, path) => {
+                var list = this._findList(id);
+                if (list) {
+                    fs.writeFile(path, JSON.stringify(list), { "encoding": "ascii" }, ex => {
+                        if (ex) ev.sender.send("background-error", "Error writing to file: " + ex.message);
+                    });
+                }
+            });
+            ipcMain.on("spelllists-loadspelllist", (ev, path) => {
+                fs.readFile(path, (ex, json) => {
+                    if (ex) ev.sender.send("background-error", "Error writing to file: " + ex.message);
+                    else {
+                        var fail = false;
+                        var newList;
+                        try {
+                            newList = JSON.parse(json);
+                            if (!newList.id) fail = true;
+                            if (!newList.spells) fail = true;
+                            if (typeof (newList.spellCount) != 'number') fail = true;
+                        }
+                        catch (ex) {
+                            fail = true;
+                        }
+                        if (!fail) {
+                            // Give it a new ID - just in case it already exists
+                            newList.id = uuidv4();
+                            this.spellListData.lists.push(newList);
+                            this._applyChanges(true, false);
+                        }
+                        if (fail) 
+                            ev.sender.send("background-error", "Unable to load file - the file does not appear to be a valid Spell List");
+                    }
+
+                });
             });
             ipcMain.on("spelllists-deletespelllist", (ev, id) => {
                 var list = this._findList(id);

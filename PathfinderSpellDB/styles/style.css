@@ -6748,9 +6748,21 @@ a.text-dark:focus, a.text-dark:hover {
   .conditions .card-body {
     padding: 0.5rem; }
 
-.spellListTable .spellListRow a.activeList, .spellListTable .spellListRow a.activeList:hover {
+.spellListConfig .spellListTable td, .spellListConfig .spellListTable th {
+  text-align: center; }
+  .spellListConfig .spellListTable td:first-child, .spellListConfig .spellListTable td:last-child, .spellListConfig .spellListTable th:first-child, .spellListConfig .spellListTable th:last-child {
+    text-align: left; }
+
+.spellListConfig .spellListTable .spellListRow a.activeList, .spellListConfig .spellListTable .spellListRow a.activeList:hover {
   color: #e7711b; }
 
-.spellListTable .spellListRow .btn-danger i {
-  color: white; }
+.spellListConfig .spellListTable .spellListRow .actions a {
+  margin-left: 10px; }
+  .spellListConfig .spellListTable .spellListRow .actions a:first-child {
+    margin-left: 0; }
+
+.spellListConfig .global-actions button {
+  margin-left: 10px; }
+  .spellListConfig .global-actions button:first-child {
+    margin-left: 0px; }
 

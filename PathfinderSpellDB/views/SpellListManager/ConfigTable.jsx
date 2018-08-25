@@ -1,7 +1,7 @@
 ﻿'use babel';
 
 import React from 'react';
-import { ipcRenderer } from 'electron';
+import { ipcRenderer, remote } from 'electron';
 import update from 'immutability-helper';
 import ConfigTableRow from './ConfigTableRow';
 
@@ -15,12 +15,33 @@ export default class ConfigTable extends React.Component {
         this.onToggleEdit = this.onToggleEdit.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onDeleteList = this.onDeleteList.bind(this);
+        this.onSaveList = this.onSaveList.bind(this);
+        this.onLoadList = this.onLoadList.bind(this);
         this.onAddList = this.onAddList.bind(this);
         this.bindIpcEvents();
     }
     onToggleEdit(list) {
         if (this.state.editList != list.id)
             ipcRenderer.send("spelllists-seteditlist", list.id);
+    }
+    onSaveList(list) {
+        remote.dialog.showSaveDialog({
+            "defaultPath": list.name + ".json",
+            "filters": [
+                {"name": "SpellDB Files", "extensions": ["json"]}
+            ]
+        }, function (fileName) {
+            if (fileName) ipcRenderer.send("spelllists-savespelllist", list.id, fileName);
+        });
+    }
+    onLoadList(list) {
+        remote.dialog.showOpenDialog({
+            "filters": [
+                { "name": "SpellDB files", "extensions": ["json"] }
+            ]
+        }, function (fileName) {
+            if (fileName && fileName[0]) ipcRenderer.send("spelllists-loadspelllist", fileName[0]);
+        });
     }
     onDeleteList(list) {
         ipcRenderer.send("spelllists-deletespelllist", list.id);
@@ -32,6 +53,9 @@ export default class ConfigTable extends React.Component {
         ipcRenderer.send("spelllists-updatelistname", list.id, value);
     }
     bindIpcEvents() {
+        ipcRenderer.on("background-error", (ev, msg) => {
+            alert(msg);
+        });
         ipcRenderer.on('spelllists-dataupdate', (ev, lists) => {
             this.setState({'lists': lists})
         });
@@ -42,7 +66,7 @@ export default class ConfigTable extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="spellListConfig">
                 <table className="table spellListTable">
                     <thead>
                         <tr>
@@ -60,11 +84,19 @@ export default class ConfigTable extends React.Component {
                             isEditList={l.id == this.state.editList}
                             onNameChange={this.onNameChange}
                             onDeleteList={this.onDeleteList}
+                            onSaveList={this.onSaveList}
                             onToggleEdit={this.onToggleEdit} />
                         )}
                     </tbody>
                 </table>
-                <button className="btn btn-success" onClick={this.onAddList}>+</button>
+                <div className="global-actions">
+                    <button className="btn btn-success" onClick={this.onAddList}>
+                        <i className="fas fa-plus"></i>&nbsp;&nbsp;Create New List
+                    </button>
+                    <button className="btn btn-secondary" onClick={this.onLoadList}>
+                        <i className="fas fa-file-upload"></i>&nbsp;&nbsp;Load From File
+                    </button>
+                </div>
             </div>
         )
     }
