@@ -92,7 +92,6 @@
     <Content Include="images\icons\Free.png" />
     <Content Include="images\icons\Reaction.png" />
     <Content Include="about.html" />
-    <Content Include="node_modules\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="spelllists.html" />
     <Content Include="quickref.html">
       <SubType>Code</SubType>
@@ -117,9 +116,6 @@
     <Folder Include="images\" />
     <Folder Include="images\icons\" />
     <Folder Include="node\" />
-    <Folder Include="node_modules\" />
-    <Folder Include="node_modules\font-awesome\" />
-    <Folder Include="node_modules\font-awesome\fonts\" />
     <Folder Include="setup\" />
     <Folder Include="views\" />
     <Folder Include="scripts\" />

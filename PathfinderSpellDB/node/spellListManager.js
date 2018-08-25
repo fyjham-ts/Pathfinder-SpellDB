@@ -1,6 +1,7 @@
 ﻿const { ipcMain } = require('electron');
 const fs = require('fs');
-const storage = require('electron-json-storage');
+const Store = require('electron-store');
+var store = new Store();
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -96,7 +97,7 @@ class SpellListManager {
         });
     }
     _applyChanges(lists, editItem) {
-        storage.set("spellListData", this.spellListData, () => {
+        this._storageSet("spellListData", this.spellListData).then(() => {
             for (var i = 0; i < this.listeningContexts.length; i++) {
                 if (this.listeningContexts[i].isDestroyed()) {
                     this.listeningContexts.splice(i, 1);
@@ -114,7 +115,7 @@ class SpellListManager {
     }
     _loadStorage() {
         return new Promise((resolve) => {
-            storage.get("spellListData", (e, d) => {
+            this._storageGet("spellListData").then((d) => {
                 // Make sure we got spell data - we always want 1 active list
                 if (d) this.spellListData = d;
                 else this.spellListData = {};
@@ -130,6 +131,16 @@ class SpellListManager {
                 resolve();
             });
         });
+    }
+    _storageGet(key) {
+        return new Promise((r) => {
+            r(store.get(key, null));
+        })
+    }
+    _storageSet(key, value) {
+        return new Promise((r) => {
+            r(store.set(key, value));
+        })
     }
     _newList() {
         return {

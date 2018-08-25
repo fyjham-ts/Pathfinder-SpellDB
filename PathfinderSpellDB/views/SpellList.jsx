@@ -1,7 +1,5 @@
 ﻿'use babel';
 
-const storage = require('electron-json-storage');
-
 import React from 'react';
 import { ipcRenderer } from 'electron';
 import SpellSearch from '../views/SpellSearch.jsx'
