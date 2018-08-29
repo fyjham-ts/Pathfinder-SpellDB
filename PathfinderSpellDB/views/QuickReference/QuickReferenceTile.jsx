@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 
 export default class QuickReferenceTile extends React.PureComponent {
     constructor(props) {

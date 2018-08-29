@@ -1,11 +1,9 @@
-'use babel';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import UpdateCheck from '../views/Update/UpdateCheck.jsx'
+import SpellList from '../views/SpellList.jsx';
 
 ReactDOM.render(
-    <UpdateCheck />,
+    <SpellList />,
     document.getElementById('app')
 )

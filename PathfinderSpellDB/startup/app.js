@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Menu } = require('electron');
-const updateManager = require("./node/updateManager");
-const spellListManager = require("./node/spellListManager");
-const menus = require("./node/menus");
+const updateManager = require("../node/updateManager");
+const spellListManager = require("../node/spellListManager");
+const menus = require("../node/menus");
 
 updateManager.init();
 spellListManager.init();
@@ -17,8 +17,8 @@ app.on('ready', function createWindow() {
         webPreferences: {
             nodeIntegration: true
         }
-    })
-    mainWindow.loadFile('index.html')
+    });
+    mainWindow.loadFile('pages/index.html');
     mainWindow.on('closed', function () { mainWindow = null });
 });
 

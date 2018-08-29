@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 import ProgressBar from '../../views/ProgressBar.jsx'
 import UpdateDetails from '../../views/Update/UpdateDetails.jsx'
 import { ipcRenderer } from 'electron';

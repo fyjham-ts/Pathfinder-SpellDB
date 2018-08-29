@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 import { ipcRenderer, remote } from 'electron';
 import update from 'immutability-helper';
 import ConfigTableRow from './ConfigTableRow';

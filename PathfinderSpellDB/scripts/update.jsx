@@ -1,11 +1,9 @@
-'use babel';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import QuickReference from '../views/QuickReference/QuickReference.jsx'
+import UpdateCheck from '../views/Update/UpdateCheck.jsx';
 
 ReactDOM.render(
-    <QuickReference />,
+    <UpdateCheck />,
     document.getElementById('app')
 )

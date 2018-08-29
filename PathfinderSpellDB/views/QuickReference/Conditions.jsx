@@ -1,5 +1,4 @@
-﻿'use babel';
-var conditions = [
+﻿var conditions = [
     { "name": "Accelerated", "description": "One type of movement Speed is increased by a given distance per action. All types increase if the movement type is unspecified." },
     { "name": "Asleep", "description": "Can’t act. Gain the Blinded and Flat-footed conditions. Take a -4 conditional penalty to Armor Class (AC) and Perception. Critically fail all Reflex saves. Can’t remained seated or standing. Drop any held or wielded items unless an effect says otherwise. Awaken if you take damage, or an ally nudges or shakes you. If a loud noise is around you, you can attempt a Perception check as a free action at the start of your turn with a -4 circumstance penalty - unless magic explicitly prevents you such an attempt. On success, you awaken." },
     { "name": "Blinded", "description": "Treat all terrain as difficult. All other creatures and objects are Unseen to you unless you succeed at a Seek action to sense them. Automatically fail or critically fail (whichever is worse) Perception checks that fully depend on sight. If vision is your only precise sense, take a –4 conditional penalty to Perception checks. You’re immune to visual effects. Blinded overrides dazzled." },

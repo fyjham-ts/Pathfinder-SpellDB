@@ -1,11 +1,9 @@
-'use babel';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SpellList from '../views/SpellList.jsx'
+import QuickReference from '../views/QuickReference/QuickReference.jsx'
 
 ReactDOM.render(
-    <SpellList />,
+    <QuickReference />,
     document.getElementById('app')
 )

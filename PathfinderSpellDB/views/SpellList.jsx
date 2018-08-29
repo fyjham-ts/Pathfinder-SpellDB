@@ -1,10 +1,8 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 import { ipcRenderer } from 'electron';
-import SpellSearch from '../views/SpellSearch.jsx'
-import SpellListItem from '../views/SpellListItem.jsx'
-import SpellDetail from '../views/SpellDetail.jsx'
+import SpellSearch from '../views/SpellSearch.jsx';
+import SpellListItem from '../views/SpellListItem.jsx';
+import SpellDetail from '../views/SpellDetail.jsx';
 import update from 'immutability-helper';
 import { loadSpellData } from '../scripts/SpellLoader.js';
 
@@ -53,7 +51,7 @@ export default class SpellList extends React.Component {
             var oldEditId = this.state.editSpellList ? this.state.editSpellList.id : null;
             this.setState({
                 'spellLists': lists,
-                'editSpellList': lists.find((l) => l.id == oldEditId),
+                'editSpellList': lists.find((l) => l.id === oldEditId),
                 'powerOptions': update(this.state.powerOptions, {
                     "Bookmark Lists": {
                         $set: lists.map(l => l.name)
@@ -63,7 +61,7 @@ export default class SpellList extends React.Component {
         });
         ipcRenderer.on('spelllists-editlistupdate', (ev, id) => {
             this.setState({
-                'editSpellList': this.state.spellLists.find((l) => l.id == id)
+                'editSpellList': this.state.spellLists.find((l) => l.id === id)
             });
         });
         ipcRenderer.send("spelllists-load");
@@ -79,46 +77,46 @@ export default class SpellList extends React.Component {
     }
     meetsCriteria(spell) {
         if (this.state.criteria.spellName) {
-            if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName) == -1) return false;
+            if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName) === -1) return false;
         }
         if (this.state.criteria.powerType) {
             
             switch (this.state.criteria.powerType) {
                 case "None": // Special "None" option - this is used when reviewing if a spell isn't classified.
-                    if (spell.type.toLowerCase() == "spell" || spell.powers.length > 0) return false;
+                    if (spell.type.toLowerCase() === "spell" || spell.powers.length > 0) return false;
                     break;
                 case "Bookmark Lists": // Special "Bookmarked" option - this is for ones you've bookmarked for quick reference
-                    var list = this.state.spellLists.find(l => l.name == this.state.criteria.powerOption);
+                    var list = this.state.spellLists.find(l => l.name === this.state.criteria.powerOption);
                     if (list && !list.spells[spell.name]) return false;
                     break;
                 default:
                     if (spell.powers.filter((p) => {
-                        return (p.powerType == this.state.criteria.powerType) &&
-                            (!this.state.criteria.powerOption || p.powerOption == this.state.criteria.powerOption)
-                    }).length == 0) return false;
+                        return (p.powerType === this.state.criteria.powerType) &&
+                            (!this.state.criteria.powerOption || p.powerOption === this.state.criteria.powerOption);
+                    }).length === 0) return false;
                     break;
             }
         }
-        if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) == -1) return false;
+        if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) === -1) return false;
 
         return true;
     }
     selectSpell(spell) {
         this.setState({
             selectedSpell: spell
-        })
+        });
     }
     criteriaReset() {
         var newCriteria = getDefaultCriteria();
         newCriteria.displayMode = this.state.criteria.displayMode;
         this.setState({
             criteria: newCriteria
-        })
+        });
     }
     criteriaChange(name, value) {
-        if (name == "powerType") {
+        if (name === "powerType") {
             var powerOption = "";
-            if (value == "Bookmark Lists") powerOption = this.state.editSpellList.name;
+            if (value === "Bookmark Lists") powerOption = this.state.editSpellList.name;
             this.setState({
                 criteria: update(this.state.criteria, {
                     [name]: { $set: value },

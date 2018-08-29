@@ -13,7 +13,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>08e3fddf-becf-4dfa-aff8-98a05bb579b9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>startup\app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -30,10 +30,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
-    <Compile Include=".babelrc">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="startup\appEntry.js" />
+    <Compile Include="startup\app.js" />
     <Compile Include="node\menus.js">
       <SubType>Code</SubType>
     </Compile>
@@ -43,12 +41,12 @@
     <Compile Include="node\spellListManager.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="scripts\QuickReference.js" />
-    <Compile Include="scripts\SpellLists.js">
+    <Compile Include="scripts\QuickReference.jsx" />
+    <Compile Include="scripts\SpellLists.jsx">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="scripts\update.js" />
-    <Compile Include="scripts\main.js" />
+    <Compile Include="scripts\update.jsx" />
+    <Compile Include="scripts\main.jsx" />
     <Compile Include="scripts\SpellLoader.js">
       <SubType>Code</SubType>
     </Compile>
@@ -78,11 +76,7 @@
     <Compile Include="views\SpellList.jsx">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults">
-      <SubType>Content</SubType>
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </Content>
+    <Content Include=".compilerc" />
     <Content Include="data\by-power.json" />
     <Content Include="data\by-list.json" />
     <Content Include="data\spells.json">
@@ -91,22 +85,14 @@
     <Content Include="images\icons\action.png" />
     <Content Include="images\icons\Free.png" />
     <Content Include="images\icons\Reaction.png" />
-    <Content Include="about.html" />
-    <Content Include="spelllists.html" />
-    <Content Include="quickref.html">
+    <Content Include="pages\about.html" />
+    <Content Include="pages\spelllists.html" />
+    <Content Include="pages\quickref.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="update.html" />
-    <Content Include="index.html" />
+    <Content Include="pages\update.html" />
+    <Content Include="pages\index.html" />
     <Content Include="package.json" />
-    <Content Include="styles\style.css">
-      <SubType>Content</SubType>
-      <DependentUpon>styles\style.scss</DependentUpon>
-    </Content>
-    <Content Include="styles\style.min.css">
-      <SubType>Content</SubType>
-      <DependentUpon>styles\style.css</DependentUpon>
-    </Content>
     <Content Include="styles\style.scss">
       <SubType>Code</SubType>
     </Content>
@@ -115,6 +101,8 @@
     <Folder Include="data\" />
     <Folder Include="images\" />
     <Folder Include="images\icons\" />
+    <Folder Include="pages\" />
+    <Folder Include="startup\" />
     <Folder Include="node\" />
     <Folder Include="setup\" />
     <Folder Include="views\" />

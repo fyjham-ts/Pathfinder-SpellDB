@@ -1,5 +1,4 @@
-﻿'use babel';
-var dcs = [
+﻿var dcs = [
     { "level": 0, "Trivial": 9, "Low": 10, "High": 12, "Severe": 14, "Extreme": 17 },
     { "level": 1, "Trivial": 10, "Low": 12, "High": 14, "Severe": 15, "Extreme": 18 },
     { "level": 2, "Trivial": 11, "Low": 13, "High": 15, "Severe": 16, "Extreme": 19 },

@@ -31,7 +31,7 @@ var mgr = {
             },
             autoHideMenuBar: !isDev
         })
-        versionWindow.loadFile('update.html');
+        versionWindow.loadFile('pages/update.html');
         versionWindow.webContents.on("did-finish-load", () => {
             versionWindow.webContents.send("version", app.getVersion());
             if (!isDev) {

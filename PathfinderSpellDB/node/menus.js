@@ -29,7 +29,7 @@ var menuItems = {
                 },
                 autoHideMenuBar: !isDev
             });
-            aboutWindow.loadFile('about.html');
+            aboutWindow.loadFile('pages/about.html');
             aboutWindow.on('closed', function () { aboutWindow = null });
         }
     },
@@ -44,7 +44,7 @@ var menuItems = {
                 }
             });
             quickRefWindow.setMenu(Menu.buildFromTemplate(genericMenuTemplate));
-            quickRefWindow.loadFile('quickref.html');
+            quickRefWindow.loadFile('pages/quickref.html');
             quickRefWindow.on('closed', function () { quickRefWindow = null });
         }
     },
@@ -59,7 +59,7 @@ var menuItems = {
                 }
             });
             spellListWindow.setMenu(Menu.buildFromTemplate(genericMenuTemplate));
-            spellListWindow.loadFile('spelllists.html');
+            spellListWindow.loadFile('pages/spelllists.html');
             spellListWindow.on('closed', function () { spellListWindow = null });
         }
     }

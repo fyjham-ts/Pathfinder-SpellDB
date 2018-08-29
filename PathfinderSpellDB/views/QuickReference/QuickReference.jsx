@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 import QuickReferenceTile from '../../views/QuickReference/QuickReferenceTile.jsx';
 import Conditions from '../../views/QuickReference/Conditions.jsx';
 import DcTable from '../../views/QuickReference/DcTable.jsx';

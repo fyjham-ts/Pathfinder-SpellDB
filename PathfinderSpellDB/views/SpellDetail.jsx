@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {
         super(props);

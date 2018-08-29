@@ -1,6 +1,4 @@
-﻿'use babel';
-
-import React from 'react';
+﻿import React from 'react';
 const { remote } = require('electron');
 import { Checkbox, CheckboxGroup } from 'react-checkbox-group';
 
@@ -12,7 +10,7 @@ export default class SpellSearch extends React.Component {
         this.handleLevelChange = this.handleLevelChange.bind(this);
     }
     handleLevelChange(newLevels) {
-        if (newLevels.indexOf('x') != -1) this.props.onCriteriaReset();
+        if (newLevels.indexOf('x') !== -1) this.props.onCriteriaReset();
         else this.props.onCriteriaChange('levels', newLevels);
     }
     handleCriteriaChange(event) {
