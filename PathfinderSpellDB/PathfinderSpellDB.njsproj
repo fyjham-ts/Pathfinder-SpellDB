@@ -60,7 +60,7 @@
     <Compile Include="node\updateManager.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\QuickReference\Conditions.jsx" />
+    <Compile Include="views\QuickReference\QuickReferenceList.jsx" />
     <Compile Include="views\QuickReference\QuickReferenceTile.jsx" />
     <Compile Include="views\QuickReference\QuickReference.jsx" />
     <Compile Include="views\QuickReference\DcTable.jsx">
@@ -91,6 +91,10 @@
     <Content Include=".compilerc" />
     <Content Include="data\by-power.json" />
     <Content Include="data\by-list.json" />
+    <Content Include="data\QuickReference\WeaponTraits.json" />
+    <Content Include="data\QuickReference\Conditions.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="data\RandomGenSchema\npcSchema.json" />
     <Content Include="data\RandomGenTables\aasimarevilquirk.json" />
     <Content Include="data\RandomGenTables\aasimargoodorevil.json" />
@@ -323,6 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="data\QuickReference\" />
     <Folder Include="data\RandomGenSchema\" />
     <Folder Include="data\RandomGenTables\" />
     <Folder Include="images\" />

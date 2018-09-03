@@ -279,9 +279,12 @@ $darkGreen: #3e4f54;
         }
     }
 }
-.conditions {
+.quickRefList {
     padding: 15px 0;
-    .card-body { padding: 0.5rem;}
+
+    .card-body {
+        padding: 0.5rem;
+    }
 }
 .spellListConfig {
     .spellListTable {

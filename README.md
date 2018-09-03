@@ -22,7 +22,7 @@ Spell data originally sourced from [PF2e Spell Finder](https://github.com/spellf
 
 Random NPC generation based heavily on code from [dndGenerator](https://github.com/cellule/dndGenerator/) - with modification for Pathfinder & removing a few dependencies I didn't want to inherit.
 
-A lot of libraries are used - all referenced as node packages so if you care go tkae a look.
+Also used a lot of tech libraries to make this work. I believe all remaining ones exist as node dependencies. Too many to list, but they're all in packages.json.
 
 # Licensing?
 I'm not a lawyer, I'm acting on a belief the data itself is licensed under the OGL (See license).

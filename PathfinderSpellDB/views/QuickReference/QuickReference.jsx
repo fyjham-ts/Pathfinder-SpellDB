@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import QuickReferenceTile from '../../views/QuickReference/QuickReferenceTile.jsx';
-import Conditions from '../../views/QuickReference/Conditions.jsx';
+import QuickReferenceList from '../../views/QuickReference/QuickReferenceList.jsx';
 import DcTable from '../../views/QuickReference/DcTable.jsx';
 
 
@@ -11,17 +11,24 @@ export default class QuickReference extends React.PureComponent {
             activeRef: null
         };
         this.selectReference = this.selectReference.bind(this);
+        var conditions = require("../../data/QuickReference/Conditions.json");
+        var weaponTraits = require("../../data/QuickReference/WeaponTraits.json");
         this.quickRefs = [
             {
                 "label": "Conditions",
                 "icon": "fa fa-allergies",
-                "render": () => <Conditions />
+                "render": () => <QuickReferenceList list={conditions} />
             },
             {
                 "label": "DC Table",
                 "icon": "fa fa-table",
                 "render": () => <DcTable />
-            }
+            },
+            {
+                "label": "Weapon Traits",
+                "icon": "fas fa-utensils",
+                "render": () => <QuickReferenceList list={weaponTraits} />
+            },
         ];
     }
     selectReference(quickRef) {
