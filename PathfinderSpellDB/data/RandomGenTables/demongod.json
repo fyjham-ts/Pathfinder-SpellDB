@@ -1,0 +1,66 @@
+[
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Abraxus}{%chaotic+3}{%evil+3}{$goddescr=, Master of the Final Incantation, Lord of Magic and Forbidden Lore. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Angazhan}{%chaotic+3}{%evil+3}{$goddescr=, the Ravener King Lord of Apes and Jungles. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Baphomet}{%chaotic+3}{%evil+3}{$goddescr=, Lord of minotaurs, beasts and labrinths. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Cyth-V'sug}{%chaotic+3}{%evil+3}{$goddescr=, Prince of the Blasted Heath, Lord of Fungus and Parasites. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Dagon}{%chaotic+3}{%evil+3}{$goddescr=, the Shadow in the Sea, Lord of the Sea and Sea Monsters. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Deskari}{%chaotic+3}{%evil+3}{$goddescr=, Lord of the Locust Host, Lord of Locusts and Infestation. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Deskari}{%chaotic+3}{%evil+3}{$goddescr=, Lord of the Locust Host, Lord of Locusts and Infestation. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Gogunta}{%chaotic+3}{%evil+3}{$goddescr=, Song of the Swamp, Lord of Boggards and Swamps. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Kostchtchie}{%chaotic+3}{%evil+3}{$goddescr=, The Deathless Frost Lord of Giants and Cold. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Lamashtu}{%chaotic+3}{%evil+3}{$goddescr=, The Mother of Monsters Lord of Madness and Monsters. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Nocticula}{%chaotic+3}{%evil+3}{$goddescr=, Our Lady in Shadow, Lord of Darkness and Lust. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Orcus}{%chaotic+3}{%evil+3}{$goddescr=, Prince of Undeath, Lord of Necromancy and the Undead. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Pazuzu}{%chaotic+3}{%evil+3}{$goddescr=, King of Wind Demons, Demon Lord of Winged Creatures and the Sky. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Shax}{%chaotic+3}{%evil+3}{$goddescr=, The Blood Marquis Demon Lord of Lies and Murder. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Socothbenoth}{%chaotic+3}{%evil+3}{$goddescr=, The Silken Sin Lord of Perversion and Taboo. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=the demon lord Zura}{%chaotic+3}{%evil+3}{$goddescr=, The Vampire Queen, Lord of Cannibalism and Vampires. (Chaotic Evil)}"
+	}
+]

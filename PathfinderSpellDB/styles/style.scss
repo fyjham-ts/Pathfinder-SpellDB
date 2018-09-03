@@ -319,3 +319,43 @@ $darkGreen: #3e4f54;
         }
     }
 }
+
+.randomNpc {
+    .npcCard {
+        margin-bottom: 20px;
+
+        .card-header {
+            text-align: center;
+            font-weight: bold;
+
+            button {
+                font-weight: normal;
+                position: absolute;
+                top: 9px;
+                right: 9px;
+            }
+        }
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .alignmentGrid {
+        text-align: center;
+    }
+
+    .abilityTable {
+        margin: 0;
+
+        tr:first-child {
+            th, td {
+                border-top: 0;
+            }
+        }
+
+        td {
+            text-align: right;
+        }
+    }
+}

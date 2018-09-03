@@ -1,0 +1,34 @@
+[
+	{
+		"w": 1,
+		"v": "{$god=Lamashtu}{%evil+2}{%chaotic+2}{$goddescr=, Goddess of monsters, madness and nightmares. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=Rovagug}{%evil+2}{%chaotic+2}{$goddescr=, God of wrath, disaster and destruction. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=Asmodeus}{%lawful+2}{%evil+2}{$goddescr=, God of tyrrany, slavery and pride, King of the Nine Hells. (Lawful Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=Norgorber}{%ethicneutral+2}{%evil+2}{$goddescr=, God of secrets, poison and murder. (Chaotic Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=Urgathoa}{%ethicneutral+2}{%evil+2}{$goddescr=, Goddess of gluttony, disease and undeath. (Neutral Evil)}"
+	},
+	{
+		"w": 1,
+		"v": "{$god=Zon-Kuthon}{%evil+2}{%lawful+2}{$goddescr=, God of envy, pain, darkness and loss.(Neutral Evil)}"
+	},
+	{
+		"w": 2,
+		"v": "{demongod}"
+	},
+	{
+		"w": 2,
+		"v": "{devilgod}"
+	}
+]

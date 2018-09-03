@@ -1,0 +1,7 @@
+[
+  {
+    "w":6,
+    "name": "Elf",
+    "v":"{$race=elf}{%str-1}{%dex+2}{%con-2}{%wis+2}{%int+2}{%cha+2}{%chaotic+3}{%good+2}{elfgod}{elfskin}{elfquirks}"
+  }
+]

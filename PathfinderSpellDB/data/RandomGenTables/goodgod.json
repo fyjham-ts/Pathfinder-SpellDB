@@ -1,0 +1,50 @@
+[
+  {
+    "w": 1,
+    "v": "{$god=Abadar}{%moralneutral+2}{%lawful+2}{$goddescr=, God of cities, law, merchants and wealth. (Lawful Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Cayden Cailean}{%good+2}{%chaotic+2}{$goddescr=, God of ale, freedom and wine. (Chaotic Good)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Calistria}{%moralneutral+2}{%chaotic+2}{$goddescr=, Goddess of lust, revenge and trickery. (Chaotic Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Erastil}{%good+2}{%lawful+2}{$goddescr=, God of family, farming, hunting and trade. (Lawful Good)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Gorum}{%moralneutral+2}{%chaotic+2}{$goddescr=, God of battle, strength and weapons. (Chaotic Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Gozreh}{%moralneutral+2}{%ethicalneutral+2}{$goddescr=, God of nature, the seas and weather. (True Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Iomodae}{%good+2}{%lawful+2}{$goddescr=, Goddess of honor, justice, rulership and valor. (Lawful Good)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Irori}{%moralneutral+2}{%ethicalneutral+2}{$goddescr=, God of history, knowledge and self-perfection. (True Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Nethys}{%moralneutral+2}{%ethicalneutral+2}{$goddescr=, God of magic, destruction and creation. (True Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Pharasma}{%moralneutral+2}{%ethicalneutral+2}{$goddescr=, God of Birth, death, fate and prophecy. (True Neutral)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Sarenrae}{%good+2}{%ethicalneutral+2}{$goddescr=, Goddess of healing, honesty, redemption and the sun. (Neutral Good)}"
+  },
+  {
+    "w": 1,
+    "v": "{$god=Shelyn}{%good+2}{%ethicalneutral+2}{$goddescr=, Goddess of art, beauty, love and magic. (Neutral Good)}"
+  }
+]

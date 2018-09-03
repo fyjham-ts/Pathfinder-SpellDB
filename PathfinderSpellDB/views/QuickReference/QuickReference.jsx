@@ -3,18 +3,6 @@ import QuickReferenceTile from '../../views/QuickReference/QuickReferenceTile.js
 import Conditions from '../../views/QuickReference/Conditions.jsx';
 import DcTable from '../../views/QuickReference/DcTable.jsx';
 
-var quickRefs = [
-    {
-        "label": "Conditions",
-        "icon": "fa fa-allergies",
-        "render": () => <Conditions />
-    },
-    {
-        "label": "DC Table",
-        "icon": "fa fa-table",
-        "render": () => <DcTable />
-    }
-];
 
 export default class QuickReference extends React.PureComponent {
     constructor(props) {
@@ -23,9 +11,21 @@ export default class QuickReference extends React.PureComponent {
             activeRef: null
         };
         this.selectReference = this.selectReference.bind(this);
+        this.quickRefs = [
+            {
+                "label": "Conditions",
+                "icon": "fa fa-allergies",
+                "render": () => <Conditions />
+            },
+            {
+                "label": "DC Table",
+                "icon": "fa fa-table",
+                "render": () => <DcTable />
+            }
+        ];
     }
     selectReference(quickRef) {
-        this.setState({'activeRef': quickRef})
+        this.setState({ 'activeRef': quickRef });
     }
     render() {
         if (this.state.activeRef) {
@@ -35,8 +35,8 @@ export default class QuickReference extends React.PureComponent {
         }
         else {
             return <div className="quickRefs">
-                {quickRefs.map((r) => <QuickReferenceTile key={r.label} QuickReference={r} onSelect={this.selectReference} /> )}
-            </div>
+                {this.quickRefs.map((r) => <QuickReferenceTile key={r.label} QuickReference={r} onSelect={this.selectReference} />)}
+            </div>;
         }
     }
 }

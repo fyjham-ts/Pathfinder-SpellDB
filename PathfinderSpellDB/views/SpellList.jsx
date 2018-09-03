@@ -77,7 +77,7 @@ export default class SpellList extends React.Component {
     }
     meetsCriteria(spell) {
         if (this.state.criteria.spellName) {
-            if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName) === -1) return false;
+            if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
         }
         if (this.state.criteria.powerType) {
             

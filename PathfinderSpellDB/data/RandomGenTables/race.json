@@ -1,0 +1,62 @@
+[
+  {
+    "w": 2,
+    "name": "Aasimar",
+    "table": "aasimar",
+    "v": "{$race=aasimar}{%str+1}{%con+1}{%wis+1}{%cha+3}{humangender}{humangod}{aasimargoodorevil}{humanskin}{age}"
+  },
+  {
+    "w": 11,
+    "name": "Dwarf",
+    "table": "dwarf",
+    "v": "{racedwarf}{%height-38}{strongweight}{dwarfgod}{nonhumanskin}{longbeard}{age}{dwarfgender}{ageBonus}{dwarfquirks}"
+  },
+  {
+    "w": 16,
+    "name": "Elf",
+    "table": "elf",
+    "v": "{raceelf}{%height-5}{lightweight}{goodface}{$beard=}{age}{elfgender}{ageBonus}"
+  },
+  {
+    "w": 7,
+    "name": "Gnome",
+    "table": "gnome",
+    "v": "{racegnome}{%height-58}{gnomegod}{nonhumanskin}{beard}{age}{gnomegender}{ageBonus}{gnomequirks}"
+  },
+  {
+    "w": 1,
+    "name": "Goblin",
+    "table": "goblin",
+    "v": "{$race=goblin}{%str-2}{%dex+2}{%con-2}{%int-4}{%wis-3}{%cha-1}{%height-50}{%ethicalneutral+2}{%lawful-2}{%evil+3}{humangod}{orcskin}{$beard=}{age}{gender}{goblinname}"
+  },
+  {
+    "w": 8,
+    "name": "Halfling",
+    "table": "halfling",
+    "v": "{racehalfling}{%height-63}{halflinggod}{nonhumanskin}{beard}{age}{halflinggender}{halfquirks}"
+  },
+  {
+    "w": 25,
+    "name": "Half-Elf",
+    "table": "halfelf",
+    "v": "{$race=half-elf}{%dex+1}{%int+1}{%cha+2}{%height-5}{%chaotic+2}{humangod}{halfelfskin}{beard}{age}{halfelfgender}"
+  },
+  {
+    "w": 5,
+    "name": "Half-Orc",
+    "table": "halforc",
+    "v": "{$race=half-orc}{%str+4}{%dex-1}{%con+3}{%int-3}{%wis-3}{%cha-1}{%height+15}{%chaotic+3}{%good-2}{strongweight}{humangod}{halforcskin}{beard}{age}{halforcgender}"
+  },
+  {
+    "w": 70,
+    "name": "Human",
+    "table": "human",
+    "v": "{$race=human}{%str+1}{%dex+1}{%con+1}{%int+1}{%wis+1}{%cha+1}{humangod}{humanskin}{beard}{age}{humangender}"
+  },
+  {
+    "w": 4,
+    "name": "Tiefling",
+    "table": "tiefling",
+    "v": "{$race=tiefling}{%con-1}{%int+2}{%cha+3}{%chaotic+3}{lightweight}{humangod}{tieflinggoodorevil}{tieflingskin}{beard}{age}{gender}{ageBonus}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "w":5,
+    "name": "Dwarf",
+    "v":"{$race=dwarf}{%con+3}{%str+4}{%dex-2}{%int-1}{%wis+1}{%lawful+2}{%chaotic-2}{%evil-2}"
+  }
+]

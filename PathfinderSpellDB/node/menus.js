@@ -33,6 +33,21 @@ var menuItems = {
             aboutWindow.on('closed', function () { aboutWindow = null });
         }
     },
+    'randomNpc': {
+        'label': 'Random NPC',
+        'click': function (item, win) {
+            let randomWindow = new BrowserWindow({
+                width: 840,
+                height: 680,
+                webPreferences: {
+                    nodeIntegration: true
+                }
+            });
+            randomWindow.setMenu(Menu.buildFromTemplate(genericMenuTemplate));
+            randomWindow.loadFile('pages/randomgen.html');
+            randomWindow.on('closed', function () { randomWindow = null });
+        }
+    },
     'quickRef': {
         'label': 'Quick Reference',
         'click': function (item, win) {
@@ -93,6 +108,7 @@ var mainMenuTemplate = [
     }, {
         'label': 'Other',
         'submenu': [
+            menuItems.randomNpc,
             menuItems.quickRef,
             menuItems.spellLists
         ]
