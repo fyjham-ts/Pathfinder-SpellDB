@@ -1,0 +1,62 @@
+﻿[
+  {
+    "name": "Fast Healing",
+    "description": "A monster with this ability regains the given number of Hit Points each round at the beginning of its turn."
+  },
+  {
+    "name": "Frightful Presence (aura, emotion, fear, mental)",
+    "description": "A creature that enters the area must attempt a Will save. It’s frightened 1 on a success, unaffected on a critical success, frightened 2 on a failure, or frightened 3 and fleeing for 1 round on a critical failure. After a creature attempts its save, it’s bolstered."
+  },
+  {
+    "name": "Grab",
+    "description": "Requirements The monster’s last action was a success with an attack that lists Grab in its damage entry, or it has a creature grabbed using this action. Effect The monster automatically Grabs the target until the end of the monster’s next turn. The creature is grabbed by whichever body part the monster attacked with, and that body part can’t be used to Strike creatures until the grab is ended. Using Grab extends the duration of the monster’s Grab until the end of its next turn for all creatures grabbed by it.The grabbed creature can Escape using Acrobatics or Break the Grapple with Athletics, and the Grab ends if the monster moves away."
+  },
+  {
+    "name": "Greater Constrict",
+    "description": "The monster automatically deals the listed amount of damage to a creature grabbed or restrained by it, and the creature must attempt a Fortitude save at the listed DC or fall unconscious. A creature that succeeds at its save is bolstered against falling unconscious in this way."
+  },
+  {
+    "name": "Improved Grab, Improved Knockdown, or Improved Push",
+    "description": "The monster can use Grab, Knockdown, or Push (as appropriate) as a free action triggered by a hit with its initial attack. A creature with Improved Grab still needs to spend an action to extend the duration for creatures it already has grabbed."
+  },
+  {
+    "name": "Knockdown",
+    "description": "Requirements The monster’s last action was a success with an attack that lists Knockdown in its damage entry. Effect The monster automatically knocks the target prone."
+  },
+  {
+    "name": "Poison",
+    "description": "When a creature is exposed to a monster’s poison, it attempts a Fortitude save or becomes poisoned. The poison follows the rules for afflictions."
+  },
+  {
+    "name": "Push",
+    "description": "Requirements The monster’s last action was a success with an attack that lists Push in its damage entry. Effect The monster automatically knocks the target away from the monster. Unless otherwise noted in the ability description, the creature is pushed 5 feet. If the attack was a critical hit, this distance is doubled."
+  },
+  {
+    "name": "Raise a Shield",
+    "description": "Requirements You are wielding a shield. Effect You position your shield to protect yourself. When you have Raised a Shield, you gain its listed bonuses to AC and TAC as circumstance bonuses and you can use the Shield Block reaction. Your shield remains raised until the start of your next turn."
+  },
+  {
+    "name": "Regeneration",
+    "description": "This monster regains the listed number of Hit Points each round at the beginning of its turn. It can’t die from damage or the dying condition; its dying condition never increases beyond dying 3 as long as its regeneration is active. If it takes damage of a type listed in the regeneration entry, however, its regeneration deactivates until the end of its next turn. Deactivate the regeneration before applying the damage, since that damage might kill the monster by bringing it to dying 4."
+  },
+  {
+    "name": "Rend",
+    "description": "A Rend entry lists a Strike the monster has. Requirements The monster hit the same enemy with two consecutive Strikes of the listed type in the same round. Effect The monster automatically deals that Strike’s damage again to the enemy."
+  },
+  {
+    "name": "Shield Block",
+    "description": "Trigger While you have your shield raised, you take damage from a physical attack. Effect You snap your shield into place to deflect a blow. Your shield prevents you from taking an amount of damage up to its Hardness—the shield takes this damage instead, possibly becoming dented or broken."
+  },
+  {
+    "name": "Swallow Whole (attack)",
+    "description": "The monster attempts to swallow a creature of the listed size or smaller that it has grabbed in its jaws or mouth. If a swallowed creature is of the maximum size listed, the monster can’t use Swallow Whole again. If the creature is smaller than the maximum, the monster can usually swallow more creatures; the GM determines the maximum. The monster attempts an Athletics check opposed by the grabbed creature’s Reflex DC. If it succeeds, it swallows the creature. The monster’s jaws or mouth no longer grabs a creature it has swallowed, so the monster is free to use them to Strike or Grab once again. The monster can’t attack creatures it has swallowed. A swallowed creature is grabbed, slowed 1, and has to hold its breath or start suffocating. The swallowed creature takes the listed amount of damage when first swallowed and at the end of each of its turns while it’s swallowed. Escaping this ability’s grabbed condition puts the victim back in the monster’s mouth. This frees any other creature grabbed in the monster’s mouth. A swallowed creature can attack the monster that has swallowed it, but only with unarmed attacks or with weapons of light Bulk or less. These attacks target the monster’s TAC. If the monster takes piercing or slashing damage equaling or exceeding the toughness value listed in its Swallow Whole entry, the swallowed creature cuts a large enough opening to exit through. The creature can immediately breathe and exits the swallowing monster’s space. If the monster dies, a swallowed creature can be freed by creatures adjacent to the corpse spending a combined total of 3 actions cutting with a weapon or unarmed attack that deals piercing or slashing damage."
+  },
+  {
+    "name": "Telepathy (aura, divination, magical)",
+    "description": "A monster with telepathy in can communicate mentally with any creatures within the listed radius, as long as they have a language. This doesn’t give any special access to their thoughts, and communicates no more information than normal speech would."
+  },
+  {
+    "name": "Trample",
+    "description": "The monster Strides up to double its Speed and can move through the spaces of creatures of the listed size, Trampling each creature whose space it enters. A trampled creature takes the damage of the listed Strike, but can attempt a Reflex save at the listed DC (half damage on a success, no damage on a critical success, double damage on a critical failure)."
+  }
+]

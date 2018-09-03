@@ -91,6 +91,7 @@
     <Content Include=".compilerc" />
     <Content Include="data\by-power.json" />
     <Content Include="data\by-list.json" />
+    <Content Include="data\QuickReference\MonsterAbilities.json" />
     <Content Include="data\QuickReference\WeaponTraits.json" />
     <Content Include="data\QuickReference\Conditions.json">
       <SubType>Code</SubType>

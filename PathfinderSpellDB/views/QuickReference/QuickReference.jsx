@@ -13,6 +13,7 @@ export default class QuickReference extends React.PureComponent {
         this.selectReference = this.selectReference.bind(this);
         var conditions = require("../../data/QuickReference/Conditions.json");
         var weaponTraits = require("../../data/QuickReference/WeaponTraits.json");
+        var monsterAbilities = require("../../data/QuickReference/MonsterAbilities.json");
         this.quickRefs = [
             {
                 "label": "Conditions",
@@ -23,6 +24,11 @@ export default class QuickReference extends React.PureComponent {
                 "label": "DC Table",
                 "icon": "fa fa-table",
                 "render": () => <DcTable />
+            },
+            {
+                "label": "Monster Abilties",
+                "icon": "fab fa-optin-monster",
+                "render": () => <QuickReferenceList list={monsterAbilities} />
             },
             {
                 "label": "Weapon Traits",
