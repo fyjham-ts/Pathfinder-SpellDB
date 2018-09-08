@@ -13,19 +13,19 @@ export default class SpellDetail extends React.PureComponent {
             var r = {
                 'icon': null,
                 'text': c
-            }
+            };
             if (r.text) {
                 switch (r.text[0]) {
                     case 'f':
-                        r.icon = <img src="./images/icons/free.png" />
+                        r.icon = <img src="../images/icons/Free.png" />;
                         r.text = r.text.substring(1);
                         break;
                     case 'a':
-                        r.icon = <img src="./images/icons/action.png" />;
+                        r.icon = <img src="../images/icons/action.png" />;
                         r.text = r.text.substring(1);
                         break;
                     case 'r':
-                        r.icon = <img src="./images/icons/reaction.png" />;
+                        r.icon = <img src="../images/icons/Reaction.png" />;
                         r.text = r.text.substring(1);
                         break;
                 }
@@ -54,6 +54,7 @@ export default class SpellDetail extends React.PureComponent {
         if (spell.duration) headerTokens.push({ 'title': 'Duration', 'value': spell.duration });
         if (spell.cost) headerTokens.push({ 'title': 'Cost', 'value': spell.cost });
         if (spell.target) headerTokens.push({ 'title': 'Target', 'value': spell.target });
+        if (spell.requirements) headerTokens.push({ 'title': "Requirements", 'value': spell.requirements });
 
         var bodySections = [];
         bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description.main.replace(/ [-•] /g, '<br/> - ') });
