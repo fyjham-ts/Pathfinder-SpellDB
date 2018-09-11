@@ -48,13 +48,13 @@ export default class SpellSearch extends React.Component {
                     <div className="form-row">
                         <label htmlFor="spellName" className="col-form-label form-label d-none d-sm-block">Spell Name</label>
                         <div className="col">
-                            <input className="form-control" name="spellName" type="text" value={this.props.spellName} onChange={this.handleCriteriaChange} />
+                            <input className="form-control" id="spellName" name="spellName" type="text" value={this.props.spellName} onChange={this.handleCriteriaChange} />
                         </div>
                     </div>
                     <div className="form-row">
                         <label htmlFor="powerType" className="col-form-label form-label d-none d-sm-block">Spell Type</label>
                         <div className="col">
-                            <select className="form-control" name="powerType" value={this.props.powerType} onChange={this.handleCriteriaChange}>
+                            <select className="form-control" id="powerType" name="powerType" value={this.props.powerType} onChange={this.handleCriteriaChange}>
                                 <option value="">All</option>
                                 {this.props.powerTypes.map((p) => { return <option key={p} value={p}>{p}</option> })}
                             </select>
@@ -64,7 +64,7 @@ export default class SpellSearch extends React.Component {
                         <div className="form-row">
                             <label htmlFor="powerOption" className="col-form-label form-label d-none d-sm-block">Subtype</label>
                             <div className="col">
-                                <select className="form-control" name="powerOption" value={this.props.powerOption} onChange={this.handleCriteriaChange}>
+                                <select className="form-control" id="powerOption" name="powerOption" value={this.props.powerOption} onChange={this.handleCriteriaChange}>
                                     <option value="">All</option>
                                     {this.props.powerOptions[this.props.powerType].map((p) => { return <option key={p} value={p}>{p}</option> })}
                                 </select>

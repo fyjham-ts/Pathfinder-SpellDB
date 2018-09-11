@@ -6,13 +6,13 @@ export default class SpellListItem extends React.PureComponent {
         var css = "spell-list-item list-group-item list-group-item-action" + (this.props.selected ? " active" : "");
         var description = null;
         if (spell.powers.length > 0) {
-            description = <span className="powerTypes">({spell.powers.map((p, index) => { return <span key={index}>{p.powerOption} {p.powerType}</span>; })})</span>;
+            description = <span className="powerTypes">({spell.powers.map((p, index) => { return <span key={index}>{p.powerOption}{p.powerType == "traditions" ? "" : " " + p.powerType}</span>; })})</span>;
         }
         return (
             <li className={css} onClick={onSelect}>
-                <span className={spell.type.toLowerCase() + " level"}>{spell.level} </span>
+                <span className={spell.type.toLowerCase() + " level rarity-" + spell.rarity}>{spell.level} </span>
                 {spell.name.toLowerCase()} {description}
             </li>
-        )
+        );
     }
-};
+}

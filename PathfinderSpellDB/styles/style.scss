@@ -4,6 +4,10 @@
 $darkGreen: #3e4f54;
 $powerRed: #8b1c1b;
 $darkGreen: #3e4f54;
+$uncommonRarity: #8b1c1b;
+$rareRarity: #e75722;
+$uniqueRarity: #25408f;
+
 .selectedSpell .spellDetail {
     position: -webkit-sticky;
     position: sticky;
@@ -22,26 +26,34 @@ $darkGreen: #3e4f54;
         .spellClass {
             display: inline-block;
             float: right;
+
             .bookmark {
                 display: inline-block;
                 padding: 0 10px 0 0;
+
                 &.active {
                     color: purple;
                 }
             }
+
             .level {
                 display: inline-block;
                 color: white;
                 padding: 0 3px;
                 border-top-left-radius: 10px;
                 margin-left: 3px;
+                background: black;
 
-                &.spell {
-                    background: black;
+                &.rarity-1 {
+                    background: $uncommonRarity;
                 }
 
-                &.power {
-                    background: $powerRed;
+                &.rarity-2 {
+                    background: $rareRarity;
+                }
+
+                &.rarity-3 {
+                    background: $uniqueRarity;
                 }
             }
         }
@@ -141,20 +153,31 @@ $darkGreen: #3e4f54;
         padding: 0 3px;
         border-top-left-radius: 10px;
         margin-left: 3px;
+        background: black;
 
-        &.spell {
-            background: black;
+        &.rarity-1 {
+            background: $uncommonRarity;
         }
 
-        &.power {
-            background: $powerRed;
+        &.rarity-2 {
+            background: $rareRarity;
+        }
+
+        &.rarity-3 {
+            background: $uniqueRarity;
         }
     }
 
     .powerTypes span {
-        text-transform:capitalize;
-        &:after { content:  ", " }
-        &:last-child:after { content: ""}
+        text-transform: capitalize;
+
+        &:after {
+            content: ", "
+        }
+
+        &:last-child:after {
+            content: ""
+        }
     }
 }
 .spell-search {

@@ -89,7 +89,7 @@ export default class SpellDetail extends React.PureComponent {
                             <i className={this.props.bookmarked ? "fas fa-bookmark" : "far fa-bookmark"} />
                         </span>
                         {spell.type}
-                        <span className={spell.type.toLowerCase() + " level"}>{spell.level}</span>
+                        <span className={spell.type.toLowerCase() + " level rarity-" + spell.rarity}>{spell.level}</span>
                     </span>
                     {spell.name}
                 </div>
