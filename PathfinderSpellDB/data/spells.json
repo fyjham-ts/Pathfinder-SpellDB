@@ -610,7 +610,7 @@
     "trigger": "A living creature within range would die.",
     "range": "60 feet",
     "target": "the triggering creature",
-    "description": { "main": "The target regains 4d8 plus your spellcasting ability modifier Hit Points, reduces its dying condition to dying 3, and gets a +2 conditional bonus to its next recovery save. You can't use breath of life if the triggering effect was disintegrate or a death effect." }
+    "description": { "main": "You prevent the target from dying, and heal the target 4d8 plus your spellcasting ability modifier Hit Points. You can't use breath of life if the triggering effect was disintegrate or a death effect." }
   },
   "burning-hands": {
     "name": "BURNING HANDS",
@@ -782,7 +782,7 @@
     "type": "SPELL",
     "level": 0,
     "rarity": 0,
-    "traits": [ "attack", "necromancy", "negative" ],
+    "traits": [ "cantrip", "attack", "necromancy", "negative" ],
     "casting": [ "aS", "aV" ],
     "range": "touch",
     "target": "one living or undead creature",
@@ -1078,7 +1078,7 @@
     "level": 1,
     "rarity": 1,
     "traits": [ "composition", "enchantment", "fortune", "mental", "power" ],
-    "casting": [ "rV", "rS" ],
+    "casting": [ "rV", "or", "rS" ],
     "trigger": "You or an ally within 60 feet must roll a saving throw against an auditory or visual effect.",
     "area": "60-foot aura",
     "description": { "main": "You protect yourself and allies through performance. Choose an auditory performance if the trigger was auditory or a visual performance if it was visual, then roll a Performance check for the chosen performance. You and allies in the area can use the higher result of your Performance check or their saving throw." }
@@ -1648,7 +1648,7 @@
     "area": "40-foot aura",
     "duration": "varies",
     "description": {
-      "main": "You utter potent words linked to your faith. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity is true neutral. You deal 7d6 damage to creatures of that alignment in the area; each creature must attempt a Will save. Creatures that match the alignment are unaffected. Those that neither match nor oppose it don\u2019t suffer effects other than damage and treat their result as one degree better.",
+      "main": "You utter potent words linked to your faith. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity is true neutral. You deal 7d6 damage to creatures in the area; each creature must attempt a Will save. Creatures that match the alignment are unaffected. Those that neither match nor oppose it don\u2019t suffer effects other than damage and treat their result as one degree better.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -2896,7 +2896,7 @@
     "target": "one object of 1 Bulk or less or area",
     "area": "four contiguous 5-foot squares",
     "duration": "1 minute",
-    "description": { "main": "You conjure greasy goo, with effects based on your target. \u2022 Target an Area Each creature within the area must attempt an Acrobatics check to Maintain Balance against your spell DC. Creatures later entering a square within the area must also attempt an Acrobatics check to Balance. A creature that takes a Step doesn\u2019t have to Balance. \u2022 Target an Object If you cast the spell on an unattended object, those trying to pick up the object must succeed at an Acrobatics check against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check. On a failure, the holder or wielder takes a \u20132 circumstance penalty to any attack roll or to any check attempted that involves using the object; on a critical failure, the holder or wielder drops the item. The object lands in an adjacent square of the GM\u2019s choice. If the object is worn, the wearer gains a +2 circumstance bonus to Fortitude saving throws against attempts to grapple or shove them." }
+    "description": { "main": "You conjure greasy goo, with effects based on your target. \u2022 Target an Area: Any solid ground in the area is covered with grease. Each creature standing on the greasy surface must succeed at a Re?ex save or an Acrobatics check to Maintain Balance against your spell DC or fall prone. Creatures moving onto the greasy surface during the spell's duration must also attempt an Acrobatics check to Balance. A creature that takes a Step doesn't have to attempt a check or save. \u2022 Target an Object If you cast the spell on an unattended object, those trying to pick up the object must succeed at an Acrobatics check against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check. On a failure, the holder or wielder takes a \u20132 circumstance penalty to any attack roll or to any check attempted that involves using the object; on a critical failure, the holder or wielder drops the item. The object lands in an adjacent square of the GM\u2019s choice. If the object is worn, the wearer gains a +2 circumstance bonus to Fortitude saving throws against attempts to grapple or shove them." }
   },
   "guidance": {
     "name": "GUIDANCE",
@@ -3314,7 +3314,7 @@
     "casting": [ "fV" ],
     "trigger": "You finish casting inspire courage.",
     "description": {
-      "main": "You call on your muse to greatly increase your inspire courage composition\u2019s benefits. Attempt a Performance check. The DC is usually a high-difficulty DC of a level equal to that of the highest-level target of your composition, but the GM can assign a different DC based on the circumstances. The effect of your inspire courage depends on the result of your check.",
+      "main": "You call on your muse to greatly increase your inspire courage composition\u2019s benefits. Attempt a Performance check. The DC is usually a hard-difficulty DC of a level equal to that of the highest-level target of your composition, but the GM can assign a different DC based on the circumstances. The effect of your inspire courage depends on the result of your check.",
       "subsections": {
         "success": "The spell bonus from inspire courage increases to +2.",
         "crit": "The spell bonus from your inspire courage increases to +3.",
@@ -3541,7 +3541,7 @@
     "casting": [ "fV" ],
     "trigger": "You finish casting a cantrip composition with a duration of 1 round.",
     "description": {
-      "main": "You attempt to add a flourish to your composition to extend its benefits. Attempt a Performance check. The DC is usually a high-difficulty DC of a level equal to the highest-level target of your composition, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check.",
+      "main": "You attempt to add a flourish to your composition to extend its benefits. Attempt a Performance check. The DC is usually a hard-difficulty DC of a level equal to the highest-level target of your composition, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check.",
       "subsections": {
         "success": "The composition lasts 2 rounds.",
         "crit": "The composition lasts 3 rounds.",
@@ -3850,7 +3850,7 @@
     "target": "one creature",
     "duration": "concentration, up to 10 minutes or until dismissed",
     "description": {
-      "main": "When you cast maze, you transport the target into an extradimensional maze of eldritch origin. Once each turn, the target can spend 1 action to attempt a Survival check against your spell DC to escape the maze. The possible outcomes of the Survival check are as follows.",
+      "main": "When you cast maze, you transport the target into an extradimensional maze of eldritch origin. Once each turn, the target can spend 1 action to attempt a Survival or Perception check against your spell DC to escape the maze. The possible outcomes of the Survival or Perception check are as follows.",
       "subsections": {
         "success": "The creature is on the right path to the exit. If the target was already on the right path, it escapes the maze and the spell ends.",
         "crit": "The creature escapes and the spell ends.",
@@ -4938,7 +4938,7 @@
     "level": 0,
     "rarity": 0,
     "traits": [ "cantrip", "detection", "divination" ],
-    "casting-time": "10 minutes",
+    "casting-time": "1 minute",
     "casting": [ "S", "V" ],
     "range": "30 feet",
     "target": "one object",
@@ -5656,7 +5656,7 @@
     "rarity": 0,
     "traits": [ "healing", "mental", "necromancy", "positive" ],
     "casting": [ "aS", "aV" ],
-    "range": "touch",
+    "range": "30 feet",
     "target": "one willing or unconscious living creature",
     "duration": "1 minute",
     "description": { "main": "You grace the target\u2019s mind, boosting its mental defenses and healing its wounds. The target regains Hit Points equal to 1d6 plus your spellcasting ability modifier when you Cast the Spell and gains a +1 conditional bonus to saves against mental effects for the duration." },
@@ -5887,8 +5887,7 @@
     "casting": [ "aS", "aV" ],
     "range": "30 feet",
     "target": "one dying creature",
-    "description": { "main": "A single touch shuts death\u2019s door. The target goes from 0 Hit Points to 1 Hit Point." },
-    "heightened": { "4th": "You also reduce the target\u2019s dying value by 1." }
+    "description": { "main": "A single touch shuts death\u2019s door. The target loses the dying condition, though it remains unconscious at 0 Hit Points." }
   },
   "status": {
     "name": "STATUS",
@@ -7167,11 +7166,11 @@
     "area": "10-foot burst",
     "duration": "1 minute",
     "description": {
-      "main": "You create a sticky web in the area that impedes creatures\u2019 movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5 and TAC 5, and it automatically fails its saving throws. Each time a creature begins to use a move action while in the web, it must attempt an Athletics check against your spell DC to avoid being entangled or immobilized. A creature that gets out of the web ceases to be entangled by it.",
+      "main": "You create a sticky web in the area that impedes creatures\u2019 movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5 and TAC 5, and it automatically fails its saving throws. Each time a creature begins to use a move action while in the web, it must attempt an Athletics check or Reflex save against your spell DC to avoid being entangled or immobilized. A creature that gets out of the web ceases to be entangled by it.",
       "subsections": {
-        "success": "The creature is unaffected and clears the web from every square it leaves after leaving the square.",
-        "crit": "The creature is unaffected and doesn\u2019t need to attempt further saving throws against the web this turn. It clears the web from every square it leaves after leaving the square.",
-        "failure": "The creature is entangled until the start of its next turn but doesn\u2019t need to attempt further saving throws against the web during this action.",
+        "success": "The creature is unaffected. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.",
+        "crit": "As success, and it doesn't need to attempt further saving throws against the web this turn.",
+        "failure": "The creature is entangled until the start of its next turn but doesn\u2019t need to attempt further Athletics checks or saving throws against the web during this action.",
         "crit-fail": "The creature is immobilized until the start of its next turn, after which it is entangled for 1 round."
       }
     },

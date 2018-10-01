@@ -40,6 +40,10 @@
     "description": "You take a conditional penalty equal to the value of this condition on any Fortitude saves and Constitution-based checks. Lose Hit Points equal to your level multiplied by this conditions’ value. Your maximum Hit Points drop by the same total. This condition’s value drops by 1 and your maximum Hit Points rise by 1 for each day you regain Hit Points by resting."
   },
   {
+    "name": "Dying",
+    "description": "You are bleeding out or otherwise at death's door. Dying always includes a value, and if it ever reaches dying 4, you die. If you're dying, you must attempt a recovery saving throw at the start of your turn to determine whether you get better or worse. If you ever have 1 HP or more, you lose the dying condition. Any time you lose the dying condition, you increase your wounded value by 1 if you already have the condition, or gain wounded 1 if you do not currently have the condition. Recovery saving throws and what happens when you regain HP while you are dying are explained above."
+  },
+  {
     "name": "Encumbered",
     "description": "Decrease every type of movement Speed by 10 feet (to no lower than 5 feet). Raise armor check penalty by 2 or take a -2 armor check penalty if unarmored."
   },
@@ -73,7 +77,7 @@
   },
   {
     "name": "Frightened",
-    "description": "Take a conditional penalty equal to this conditions’ value on checks and saves. Unless specified, this condition’s value drops by 1 at the end of each of your turns."
+    "description": "Take a conditional penalty equal to this condition's value on checks, including DC's (such as AC or Class DC). Unless specified, this condition's value drops by 1 at the end of each of your turns."
   },
   {
     "name": "Grabbed",
@@ -138,5 +142,13 @@
   {
     "name": "Unseen",
     "description": "When unseen by a creature, it can’t see you at all, has no idea what space you occupy, is flat-footed to you, and can’t target you with attacks or targeted spells and effects, though area effects can affect you. A creature can use the Seek action to try to find you. On success, you’re Sensed."
+  },
+  {
+    "name": "Unconscious",
+    "description": "You've been knocked out. You can't act. You also take a –4 conditional penalty to AC and have the blinded, deafened, and flat-footed conditions. When you gain this condition, you fall prone and drop items you are wielding or holding unless the effect states otherwise or the GM determines you're in a position in which you wouldn't. If you ever return to 1 Hit Point or more, you become conscious. If you were dying when you regain conscious, you're slowed for 1 round, with a slowed value equal to the dying value you had just before you returned to 1 HP. When you're unconscious and at 0 HP but no longer dying, you naturally return to 1 HP and awaken after suffcient time passes. The GM determines how long you remain unconscious, from at least 10 minutes to several hours."
+  },
+  {
+    "name": "Wounded",
+    "description": "You have been seriously injured during a fght. As long as you have the wounded condition, if you gain the dying condition or increase it for any reason, increase the amount you gain or increase by your wounded value. The wounded condition ends if someone attends to you with Treat Wounds, or if you are healed to full Hit Points and rest for 10 minutes."
   }
 ]
