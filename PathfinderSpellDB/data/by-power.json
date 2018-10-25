@@ -68,7 +68,7 @@
     "universalist": [ "hand-of-the-apprentice" ]
   },
   "composition": {
-    "cantrips": [ "allegro", "dirge-of-doom", "house-of-imaginary-walls", "inspire-competence", "triple-time" ],
+    "cantrips": [ "allegro", "dirge-of-doom", "house-of-imaginary-walls", "inspire-competence", "inspire-courage", "triple-time" ],
     "powers": [ "counter-performance", "lingering-composition", "loremaster-s-recall", "harmonize", "inspire-heroics", "soothing-ballad", "fatal-aria" ]
   },
   "order": {

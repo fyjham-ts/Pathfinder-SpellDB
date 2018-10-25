@@ -75,7 +75,7 @@
     "casting": [ "aS", "aV" ],
     "range": "120 feet",
     "target": "one creature or object",
-    "description": { "main": "Make a ranged touch attack against the target. On a hit, you deal acid damage equal to 1d8 plus your spellcasting ability modifier plus 1d6 persistent acid damage. On a critical hit, double the damage, but not the persistent damage." },
+    "description": { "main": "Make a ranged touch attack against the target. On a hit, you deal acid damage equal to 2d8 plus your spellcasting ability modifier plus 1d6 persistent acid damage. On a critical hit, double the damage, but not the persistent damage." },
     "heightened": { "+2": "1d8 extra damage and 1d6 extra persistent damage" }
   },
   "acid-splash": {
@@ -505,7 +505,7 @@
     "range": "120 feet",
     "area": "20-foot burst adjacent to a flat surface",
     "duration": "1 minute or until dismissed",
-    "description": { "main": "Tentacles rise and attempt to Grapple each creature in the area. Make spell rolls against the Fortitude DC of each creature. Any creature you succeed against is grabbed and takes 2d6 bludgeoning damage. Whenever a creature ends its turn in the tentacles, the tentacles attempt to grab that creature if they haven't already, and deal 1d6 bludgeoning damage to any creature grabbed. The tentacles' escape DC is equal to your spell DC. A creature can attack a tentacle in an attempt to release its grip. It has AC 25 and TAC 23 and is destroyed if it takes 12 damage or more." }
+    "description": { "main": "Tentacles rise and attempt to Grapple each creature in the area. Make spell rolls against the Fortitude DC of each creature. Any creature you succeed against is grabbed and takes 3d6 bludgeoning damage. Whenever a creature ends its turn in the tentacles, the tentacles attempt to grab that creature if they haven't already, and deal 1d6 bludgeoning damage to any creature grabbed. The tentacles' escape DC is equal to your spell DC. A creature can attack a tentacle in an attempt to release its grip. It has AC 25 and TAC 23 and is destroyed if it takes 12 damage or more." }
   },
   "blade-barrier": {
     "name": "BLADE BARRIER",
@@ -517,7 +517,7 @@
     "range": "120 feet",
     "duration": "1 minute",
     "description": {
-      "main": "Blades of force form a churning wall. The wall is a straight line 20 feet high, 120 feet long, and 2 inches thick and provides cover. You deal 6d8 force damage to each creature in its space when the wall is created, that attempts to pass through the wall, or that ends its turn inside the wall; the creature must attempt a Reflex save. A creature that succeeds when the wall is created is pushed to the nearest space on the side of its choice.",
+      "main": "Blades of force form a churning wall. The wall is a straight line 20 feet high, 120 feet long, and 2 inches thick and provides cover. You deal 8d8 force damage to each creature in its space when the wall is created, that attempts to pass through the wall, or that ends its turn inside the wall; the creature must attempt a Reflex save. A creature that succeeds when the wall is created is pushed to the nearest space on the side of its choice.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -621,7 +621,7 @@
     "casting": [ "aS", "aV" ],
     "area": "15-foot cone",
     "description": {
-      "main": "Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area; they must each attempt a Reflex save.",
+      "main": "Gouts of flame rush from your hands. You deal 3d6 fire damage to creatures in the area; they must each attempt a Reflex save.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature takes no damage.",
@@ -711,7 +711,7 @@
     "range": "500 feet",
     "target": "one creature, plus any number of additional creatures",
     "description": {
-      "main": "You discharge a powerful bolt of lightning at the target, dealing 7d12 electricity damage unless it succeeds at a Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can't target the same creature more than once, and you must have line of effect to all targets. Targets after the first take 6d12 electricity damage and must attempt a Reflex save. Roll the damage only once and apply it to each target (halving or doubling when necessary).",
+      "main": "You discharge a powerful bolt of lightning at the target, dealing 9d12 electricity damage unless it succeeds at a Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can't target the same creature more than once, and you must have line of effect to all targets. Targets after the first take 8d12 electricity damage and must attempt a Reflex save. Roll the damage only once and apply it to each target (halving or doubling when necessary).",
       "subsections": {
         "success": "The targets take half damage.",
         "crit": "The targets are unaffected, and the chain ends.",
@@ -812,9 +812,9 @@
     "description": {
       "main": "You create an opaque wall of light in a vibrant color. The wall is straight and vertical, stretching 60 feet across and 30 feet high. If it would pass through a creature, the spell is lost. The wall sheds bright light 20 feet on each side. You can ignore its effects. Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can't be dispelled normally; rather, each color is automatically dispelled when targeted by a specific spell, even if that spell is a lower level than chromatic wall.",
       "subsections": {
-        "1:Red": "Destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and deals 15 fire damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by cone of cold.",
-        "2:Orange": "Destroys thrown weapons that would pass through, and deals 20 acid damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by gust of wind.",
-        "3:Yellow": "Stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and deals 25 electricity damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by disintegrate.",
+        "1:Red": "Destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and deals 20 fire damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by cone of cold.",
+        "2:Orange": "Destroys thrown weapons that would pass through, and deals 25 acid damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by gust of wind.",
+        "3:Yellow": "Stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and deals 35 electricity damage to anyone passing through (Reflex half, or none on a critical success). Dispelled by disintegrate.",
         "4:Green": "Stops toxins, gases, and breath weapons from passing through, and deals 10 poison damage to anyone passing through and makes them enfeebled 1 (Fortitude half damage and negate enfeebled, and no damage on a critical success) for 1 minute. Dispelled by passwall."
       }
     },
@@ -887,7 +887,7 @@
     "area": "20-foot burst",
     "duration": "1 minute or until dismissed",
     "description": {
-      "main": "You conjure a moving bank of poisonous fog. This functions as obscuring mist, except the area moves 10 feet away from you each round. You deal 5d6 poison damage to each breathing creature that starts its turn in the spell's area; each creature must attempt a Fortitude save.",
+      "main": "You conjure a moving bank of poisonous fog. This functions as obscuring mist, except the area moves 10 feet away from you each round. You deal 7d6 poison damage to each breathing creature that starts its turn in the spell's area; each creature must attempt a Fortitude save.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature takes no damage.",
@@ -1000,7 +1000,7 @@
     "casting": [ "aS", "aV" ],
     "area": "30-foot cone",
     "description": {
-      "main": "Icy cold rushes forth from your hands. You deal 11d6 cold damage to creatures in the area; they must each attempt a Reflex save. When casting this Spell, you can add a Material Casting action to include a small crystal or icicle. If you do, increase the area to a 60-foot cone.",
+      "main": "Icy cold rushes forth from your hands. You deal 14d6 cold damage to creatures in the area; they must each attempt a Reflex save. When casting this Spell, you can add a Material Casting action to include a small crystal or icicle. If you do, increase the area to a 60-foot cone.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature takes no damage.",
@@ -1132,7 +1132,7 @@
     "range": "30 feet",
     "target": "one creature",
     "description": {
-      "main": "You assault the target's faith, riddling the creature with doubt and mental turmoil for 6d4 mental damage, or 6d6 mental damage if it can cast divine spells. The effects are determined by its Will save. To many deities, casting this spell on a follower of your own deity without significant cause is anathema.",
+      "main": "You assault the target's faith, riddling the creature with doubt and mental turmoil for 8d4 mental damage, or 8d6 mental damage if it can cast divine spells. The effects are determined by its Will save. To many deities, casting this spell on a follower of your own deity without significant cause is anathema.",
       "subsections": {
         "success": "The target takes half damage.",
         "crit": "The target takes no damage.",
@@ -1553,7 +1553,7 @@
     "range": "120 feet",
     "target": "one creature or unattended object",
     "description": {
-      "main": "You fire a green ray at your target. Make a ranged touch attack. You deal 12d10 damage and the target must attempt a Fortitude save. On a critical hit, treat the save result as one degree worse. A creature reduced to 0 HP is reduced to fine powder; gear remains. An object you hit is destroyed (no save), regardless of Hardness, unless it\u2019s an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force.",
+      "main": "You fire a green ray at your target. Make a ranged touch attack. You deal 16d10 damage and the target must attempt a Fortitude save. On a critical hit, treat the save result as one degree worse. A creature reduced to 0 HP is reduced to fine powder; gear remains. An object you hit is destroyed (no save), regardless of Hardness, unless it\u2019s an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force.",
       "subsections": {
         "success": "The target takes half damage.",
         "failure": "The target takes full damage.",
@@ -1648,7 +1648,7 @@
     "area": "40-foot aura",
     "duration": "varies",
     "description": {
-      "main": "You utter potent words linked to your faith. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity is true neutral. You deal 7d6 damage to creatures in the area; each creature must attempt a Will save. Creatures that match the alignment are unaffected. Those that neither match nor oppose it don\u2019t suffer effects other than damage and treat their result as one degree better.",
+      "main": "You utter potent words linked to your faith. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity is true neutral. You deal 9d6 damage to creatures in the area; each creature must attempt a Will save. Creatures that match the alignment are unaffected. Those that neither match nor oppose it don\u2019t suffer effects other than damage and treat their result as one degree better.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -1700,7 +1700,7 @@
     "range": "120 feet",
     "area": "20-foot burst",
     "description": {
-      "main": "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity your deity is true neutral. You deal 4d8 damage of that alignment. Creatures that match the alignment are unaffected. Those that neither match nor oppose it treat their result as one degree better.",
+      "main": "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can\u2019t cast this spell if you don\u2019t have a deity or your deity your deity is true neutral. You deal 5d8 damage of that alignment. Creatures that match the alignment are unaffected. Those that neither match nor oppose it treat their result as one degree better.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature takes no damage.",
@@ -2425,7 +2425,7 @@
     "range": "30 feet",
     "target": "one living creature",
     "description": {
-      "main": "You point your finger toward the target and speak a word of slaying. You deal 50 negative damage to the target, and the target must attempt a Fortitude save. If the damage from finger of death reduces the target to 0 Hit Points, the target dies instantly.",
+      "main": "You point your finger toward the target and speak a word of slaying. You deal 65 negative damage to the target, and the target must attempt a Fortitude save. If the damage from finger of death reduces the target to 0 Hit Points, the target dies instantly.",
       "subsections": {
         "success": "The target takes half damage.",
         "crit": "The target is unaffected.",
@@ -2456,7 +2456,7 @@
     "casting": [ "aS", "aV" ],
     "duration": "1 minute",
     "description": {
-      "main": "Four acorns grow in your hand, their shells streaked with red patterns. You or anyone else who has one of the acorns can toss it up to 30 feet with an action that has the manipulate trait. It explodes in a 5-foot burst, dealing 4d6 fire damage, and each creature in the area must attempt a Reflex save. The save uses your spell DC, even if someone else throws the acorn. Flames continue to burn on the ground in the burst for 1 minute, dealing 2d6 fire damage to any creature that enters the flames or ends its turn within them. A creature can take damage from the continuing flames only once per round, even if it\u2019s in overlapping areas of fire created by different acorns. When the spell ends, any remaining acorns rot and turn to ordinary soil.",
+      "main": "Four acorns grow in your hand, their shells streaked with red patterns. You or anyone else who has one of the acorns can toss it up to 30 feet with an action that has the manipulate trait. It explodes in a 5-foot burst, dealing 5d6 fire damage, and each creature in the area must attempt a Reflex save. The save uses your spell DC, even if someone else throws the acorn. Flames continue to burn on the ground in the burst for 1 minute, dealing 2d6 fire damage to any creature that enters the flames or ends its turn within them. A creature can take damage from the continuing flames only once per round, even if it\u2019s in overlapping areas of fire created by different acorns. When the spell ends, any remaining acorns rot and turn to ordinary soil.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -2490,7 +2490,7 @@
     "range": "500 feet",
     "area": "20-foot burst",
     "description": {
-      "main": "A burst of fire explodes, dealing 6d6 fire damage; creatures in the area must attempt a Reflex save.",
+      "main": "A burst of fire explodes, dealing 8d6 fire damage; creatures in the area must attempt a Reflex save.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -2521,7 +2521,7 @@
     "range": "120 feet",
     "area": "10-foot radius, 40-foot-tall cylinder",
     "description": {
-      "main": "You call a rain of divine fire that plummets down from above, dealing 8d6 fire damage. Each creature in the area must attempt a Reflex save. Because the flame is infused with divine energy, creatures in the area apply only half their usual fire resistance. Creatures that are immune to fire treat their result on the saving throw as one degree of success better instead of gaining the usual benefit of immunity.",
+      "main": "You call a rain of divine fire that plummets down from above, dealing 11d6 fire damage. Each creature in the area must attempt a Reflex save. Because the flame is infused with divine energy, creatures in the area apply only half their usual fire resistance. Creatures that are immune to fire treat their result on the saving throw as one degree of success better instead of gaining the usual benefit of immunity.",
       "subsections": {
         "success": "The creature takes half damage.",
         "crit": "The creature is unaffected.",
@@ -2542,7 +2542,7 @@
     "area": "one 5-foot square",
     "duration": "concentration or until dismissed (see below)",
     "description": {
-      "main": "You create a sphere of flame in a square within range. The sphere deals 3d6 fire damage to each creature in the sphere\u2019s square; each creature must attempt a Reflex save. Once per round when you Concentrate on this Spell, you can direct the sphere to roll to a spot within range and deal 3d6 fire damage; each creature in that square must attempt a Reflex save. You can\u2019t Concentrate on the Spell to move the sphere during the round you create it.",
+      "main": "You create a sphere of flame in a square within range. The sphere deals 4d6 fire damage to each creature in the sphere\u2019s square; each creature must attempt a Reflex save. Once per round when you Concentrate on this Spell, you can direct the sphere to roll to a spot within range and deal 3d6 fire damage; each creature in that square must attempt a Reflex save. You can\u2019t Concentrate on the Spell to move the sphere during the round you create it.",
       "subsections": {
         "success": "The creature is unaffected.",
         "failure": "The creature takes full damage.",
@@ -2875,7 +2875,7 @@
     "casting": [ "aS", "aV" ],
     "area": "30-foot line",
     "description": {
-      "main": "Black shadows curl out from your fingertips and race through the air, taking the form of ephemeral vines spiked with thorns. You deal 2d4 negative damage and 1 persistent bleed damage to living creature in the line, depending on their Fortitude saves.",
+      "main": "Black shadows curl out from your fingertips and race through the air, taking the form of ephemeral vines spiked with thorns. You deal 3d4 negative damage and 1 persistent bleed damage to living creature in the line, depending on their Fortitude saves.",
       "subsections": {
         "success": "The creature takes half negative damage and no bleed.",
         "crit": "The creature is unaffected.",
@@ -3105,7 +3105,7 @@
     "range": "500 feet",
     "target": "any number of living creatures",
     "description": {
-      "main": "You pull the moisture from the targets\u2019 bodies, dealing 9d10 negative damage. Each target must attempt a Fortitude save to avoid withering in this fashion. Creatures made of water (such as water elementals) and plant creatures automatically treat their outcomes as one degree of success worse. Creatures whose bodies contain no significant moisture (such as earth elementals) are immune to horrid wilting.",
+      "main": "You pull the moisture from the targets\u2019 bodies, dealing 12d10 negative damage. Each target must attempt a Fortitude save to avoid withering in this fashion. Creatures made of water (such as water elementals) and plant creatures automatically treat their outcomes as one degree of success worse. Creatures whose bodies contain no significant moisture (such as earth elementals) are immune to horrid wilting.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -3248,7 +3248,7 @@
     "target": "one corporeal creature",
     "duration": "concentration, up to 1 minute",
     "description": {
-      "main": "You crush the target by causing it to collapse in on itself, dealing 75 damage. The target must attempt a Fortitude save. Each time you Concentrate on the Spell, you must choose a new target to be subject to the same effect. You can\u2019t affect more than one creature per turn with implosion. You can\u2019t target a creature that\u2019s incorporeal, gaseous, or liquid, or that otherwise lacks a solid form.",
+      "main": "You crush the target by causing it to collapse in on itself, dealing 100 damage. The target must attempt a Fortitude save. Each time you Concentrate on the Spell, you must choose a new target to be subject to the same effect. You can\u2019t affect more than one creature per turn with implosion. You can\u2019t target a creature that\u2019s incorporeal, gaseous, or liquid, or that otherwise lacks a solid form.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -3468,7 +3468,7 @@
     "range": "touch",
     "target": "one creature",
     "description": {
-      "main": "You deal 7d4 piercing damage to the touched creature and afflict it with Leng spider venom, depending on its Fortitude save.",
+      "main": "You deal 9d4 piercing damage to the touched creature and afflict it with Leng spider venom, depending on its Fortitude save.",
       "subsections": {
         "success": "The target takes 4d6 poison damage.",
         "crit": "The target is unaffected.",
@@ -3522,7 +3522,7 @@
     "casting": [ "aS", "aV" ],
     "area": "60-foot line",
     "description": {
-      "main": "All creatures in the area must attempt a Reflex save to avoid taking 4d12 electricity damage.",
+      "main": "All creatures in the area must attempt a Reflex save to avoid taking 5d12 electricity damage.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -3918,7 +3918,7 @@
     "range": "500 feet",
     "area": "four 40-foot bursts",
     "description": {
-      "main": "You call down four blazing meteors that explode. Each meteor deals 3d10 bludgeoning damage to any creatures in the 10-foot burst at the center of each area of effect; the meteor then explodes, dealing 14d6 fire damage to any creatures in each 40-foot burst. The meteors\u2019 central 10-foot bursts can\u2019t overlap, and a creature takes the same amount of fire damage no matter how many overlapping explosions it\u2019s caught in. Each creature in the area can attempt a Reflex saving throw, which applies to both types of damage.",
+      "main": "You call down four blazing meteors that explode. Each meteor deals 4d10 bludgeoning damage to any creatures in the 10-foot burst at the center of each area of effect; the meteor then explodes, dealing 19d6 fire damage to any creatures in each 40-foot burst. The meteors\u2019 central 10-foot bursts can\u2019t overlap, and a creature takes the same amount of fire damage no matter how many overlapping explosions it\u2019s caught in. Each creature in the area can attempt a Reflex saving throw, which applies to both types of damage.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -4414,7 +4414,7 @@
     "range": "500 feet",
     "area": "30-foot burst",
     "description": {
-      "main": "A vision of apocalyptic destruction fills the mind of each target. Each creature in the area sees its own version of the calamity tailored to its worst fears, and must attempt a Will saving throw. This vision deals 11d6 mental damage and inflicts other effects, depending on the outcome of each creature\u2019s saving throw. It must succeed at a Reflex saving throw or believe it\u2019s trapped (fallen into a crevasse, adrift at sea, or some other fate depending on its vision). If it fails, it\u2019s stunned for 1 minute. It gets a new Will save at the end of each of its turns, and on a success, it disbelieves the illusion and recovers from stunned.",
+      "main": "A vision of apocalyptic destruction fills the mind of each target. Each creature in the area sees its own version of the calamity tailored to its worst fears, and must attempt a Will saving throw. This vision deals 15d6 mental damage and inflicts other effects, depending on the outcome of each creature\u2019s saving throw. It must succeed at a Reflex saving throw or believe it\u2019s trapped (fallen into a crevasse, adrift at sea, or some other fate depending on its vision). If it fails, it\u2019s stunned for 1 minute. It gets a new Will save at the end of each of its turns, and on a success, it disbelieves the illusion and recovers from stunned.",
       "subsections": {
         "success": "Half damage.",
         "crit": "Unaffected.",
@@ -4455,7 +4455,7 @@
     "target": "one creature",
     "duration": "1 minute",
     "description": {
-      "main": "Pain wracks the target, dealing 1d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will saving throw.",
+      "main": "Pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will saving throw.",
       "subsections": {
         "success": "Full damage, but no persistent damage and the spell ends immediately.",
         "crit": "The target is unaffected.",
@@ -4533,7 +4533,7 @@
     "casting": [ "aS", "aV" ],
     "range": "120 feet",
     "target": "one creature or object",
-    "description": { "main": "You fire a blue-white ray of freezing air and swirling sleet from your finger that can chill its target to the bones. You must succeed at a ranged touch attack to affect the target, which then takes 8d8 cold damage and is drained 2." },
+    "description": { "main": "You fire a blue-white ray of freezing air and swirling sleet from your finger that can chill its target to the bones. You must succeed at a ranged touch attack to affect the target, which then takes 13d8 cold damage and is drained 2." },
     "heightened": { "+1": "The damage increases by 2d8." }
   },
   "possession": {
@@ -4591,8 +4591,8 @@
       "main": "You utter a word of power that potentially kills the target upon hearing it. Once targeted, the target is bolstered against all castings of power word kill. The effect of the spell depends on the target\u2019s level.",
       "subsections": {
         "14th or Lower": "The target dies instantly.",
-        "15th": "If the target had 50 Hit Points or fewer, it dies instantly; otherwise, it drops to 0 Hit Points and gains dying 1 or increases its dying condition by 1 if it\u2019s already dying.",
-        "16th or Higher": "The target takes 50 damage; if this brings the target to 0 Hit Points, the target dies instantly."
+        "15th": "If the target had 65 Hit Points or fewer, it dies instantly; otherwise, it drops to 0 Hit Points and gains dying 1 or increases its dying condition by 1 if it\u2019s already dying.",
+        "16th or Higher": "The target takes 65 damage; if this brings the target to 0 Hit Points, the target dies instantly."
       }
     },
     "heightened": { "+1": "The levels at which each outcome applies increase by 2." }
@@ -4689,10 +4689,10 @@
     "table": {
       "headers": [ "1d8", "Color", "Save", "Effect (Traits)" ],
       "rows": [
-        [ 1, "Red", "Reflex", "30 fire damage (fire)" ],
-        [ 2, "Orange", "Reflex", "40 acid damage (acid)" ],
-        [ 3, "Yellow", "Reflex", "50 electricity damage (electricity)" ],
-        [ 4, "Green", "Fortitude", "20 poison damage and enfeebled 1 for 1 minute (poison)" ],
+        [ 1, "Red", "Reflex", "40 fire damage (fire)" ],
+        [ 2, "Orange", "Reflex", "50 acid damage (acid)" ],
+        [ 3, "Yellow", "Reflex", "65 electricity damage (electricity)" ],
+        [ 4, "Green", "Fortitude", "25 poison damage and enfeebled 1 for 1 minute (poison)" ],
         [ 5, "Blue", "Fortitude", "Affected as if by flesh to stone" ],
         [ 6, "Indigo", "Will", "Confused, per the warp mind spell (mental)" ],
         [ 7, "Violet", "Will", "Slowed 1 for 1 minute sent to another plane, per plane shift, on a critical failure (teleportation)" ],
@@ -5346,7 +5346,7 @@
     "casting": [ "aS", "aV" ],
     "range": "120 feet",
     "target": "one creature",
-    "description": { "main": "You shoot a blazing-hot ray of light tinged with holy energy. Make a ranged touch attack against the target. If you hit, you deal 4d6 fire damage. If the target is a fiend or undead, you deal 4d6 additional good damage to it. On a critical hit, double all the damage. If the light passes through an area of magical darkness or targets a creature affected by magical darkness, searing light attempts to dispel the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between you and the spell\u2019s target." },
+    "description": { "main": "You shoot a blazing-hot ray of light tinged with holy energy. Make a ranged touch attack against the target. If you hit, you deal 5d6 fire damage. If the target is a fiend or undead, you deal 4d6 additional good damage to it. On a critical hit, double all the damage. If the light passes through an area of magical darkness or targets a creature affected by magical darkness, searing light attempts to dispel the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between you and the spell\u2019s target." },
     "heightened": { "+2": "The fire damage by 3d6 and the good damage against fiends and undead increases by 3d6." }
   },
   "secret-page": {
@@ -5394,7 +5394,7 @@
     "range": "varies",
     "area": "varies",
     "description": {
-      "main": "You shape the mutable and quasi-real substance of the Shadow Plane into a deadly blast. Choose acid, bludgeoning, cold, electricity, fire, piercing, or slashing, and choose a 30-foot cone, a 15-foot burst within 120 feet, or a 50-foot line. The blast deals 5d8 damage of the type you chose to creatures in the area; these creatures must attempt their choice of a Reflex or Will save.",
+      "main": "You shape the mutable and quasi-real substance of the Shadow Plane into a deadly blast. Choose acid, bludgeoning, cold, electricity, fire, piercing, or slashing, and choose a 30-foot cone, a 15-foot burst within 120 feet, or a 50-foot line. The blast deals 7d8 damage of the type you chose to creatures in the area; these creatures must attempt their choice of a Reflex or Will save.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -5526,7 +5526,7 @@
     "casting": [ "aS", "aV" ],
     "range": "touch",
     "target": "one creature",
-    "description": { "main": "On a hit, the target takes electricity damage equal to 1d12 plus your spellcasting ability modifier. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with shocking grasp and the target takes 1d4 persistent electricity damage on a hit. On a critical hit, double the damage, but not the persistent damage." },
+    "description": { "main": "On a hit, the target takes electricity damage equal to 1d12 plus your spellcasting ability modifier. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with shocking grasp and the target takes 1d6 persistent electricity damage on a hit. On a critical hit, double the damage, but not the persistent damage." },
     "heightened": { "+1": "The damage increases by 1d12 and the persistent electricity damage increases by 1." }
   },
   "shrink": {
@@ -5698,7 +5698,7 @@
     "range": "30 feet",
     "area": "10-foot burst",
     "description": {
-      "main": "You deal 2d8 sonic damage to creatures in the area, depending on their Fortitude saves.",
+      "main": "You deal 3d8 sonic damage to creatures in the area, depending on their Fortitude saves.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -5802,7 +5802,7 @@
     "range": "touch",
     "target": "one creature",
     "description": {
-      "main": "You deal 1d4 piercing damage to the touched creature and afflict it with spider venom, depending on its Fortitude save.",
+      "main": "You deal 2d4 piercing damage to the touched creature and afflict it with spider venom, depending on its Fortitude save.",
       "subsections": {
         "success": "The target takes 1d4 poison damage.",
         "crit": "The target is unaffected.",
@@ -5822,7 +5822,7 @@
     "range": "30 feet",
     "target": "one creature",
     "description": {
-      "main": "You concentrate ethereal energy and attack a creature\u2019s spirit, dealing 12d6 force damage. It must attempt a Fortitude save. Because spirit blast affects the creature\u2019s spirit, it can damage a target projecting its consciousness or possessing another creature even if the target\u2019s body is elsewhere. The possessed creature isn\u2019t harmed by the blast. The blast doesn\u2019t harm creatures that have no spirit, such as constructs.",
+      "main": "You concentrate ethereal energy and attack a creature\u2019s spirit, dealing 16d6 force damage. It must attempt a Fortitude save. Because spirit blast affects the creature\u2019s spirit, it can damage a target projecting its consciousness or possessing another creature even if the target\u2019s body is elsewhere. The possessed creature isn\u2019t harmed by the blast. The blast doesn\u2019t harm creatures that have no spirit, such as constructs.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -5995,9 +5995,9 @@
     "description": {
       "main": "A massive storm cloud forms in the air in a 360-foot burst. Beneath it, rain begins to fall, and whipping winds impose a \u20134 circumstance penalty to physical ranged attacks and weapon ranged attacks. When you cast this spell and the first time each round you Concentrate on the Spell, you can choose one of the following storm effects. You can\u2019t choose the same one twice in a row.",
       "subsections": {
-        "Acid Rain": "Each creature in the storm takes 3d8 acid damage with no saving throw.",
-        "Hail": "The storm deals 3d10 bludgeoning damage to creatures beneath it. A successful Fortitude save reduces the damage to half (no damage on a critical success).",
-        "Lightning": "Up to 10 bolts of lightning strike down, targeting creatures of your choice in the storm. No more than one bolt can target any one creature. Each bolt deals 5d6 electricity damage ( half damage on a successful Reflex save, no damage on a critical success, and double damage on a critical failure).",
+        "Acid Rain": "Each creature in the storm takes 4d8 acid damage with no saving throw.",
+        "Hail": "The storm deals 4d10 bludgeoning damage to creatures beneath it. A successful Fortitude save reduces the damage to half (no damage on a critical success).",
+        "Lightning": "Up to 10 bolts of lightning strike down, targeting creatures of your choice in the storm. No more than one bolt can target any one creature. Each bolt deals 4d12 electricity damage ( half damage on a successful Reflex save, no damage on a critical success, and double damage on a critical failure).",
         "Rain and Wind": "Heavy rain and whipping wind reduce visibility and mobility, making the area under the storm cloud concealed and difficult terrain.",
         "Thunderclap": "Each creature in the storm must succeed at a Fortitude save or be deafened for 10 minutes. A creature that succeeds is bolstered against thunderclaps from the same storm of vengeance spell."
       }
@@ -6130,7 +6130,7 @@
     "range": "500 feet",
     "area": "60-foot burst",
     "description": {
-      "main": "A globe of searing sunlight explodes in the area, dealing 7d8 fire damage to creatures and objects in the area, plus 7d8 additional positive damage to undead creatures. Creatures and objects in the area must attempt a Reflex save. If the globe overlaps with an area of magical darkness or affects a creature affected by magical darkness, sunburst attempts to dispel the darkness effect.",
+      "main": "A globe of searing sunlight explodes in the area, dealing 9d8 fire damage to creatures and objects in the area, plus 9d8 additional positive damage to undead creatures. Creatures and objects in the area must attempt a Reflex save. If the globe overlaps with an area of magical darkness or affects a creature affected by magical darkness, sunburst attempts to dispel the darkness effect.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -6759,7 +6759,7 @@
     "casting": [ "aS", "aV" ],
     "area": "30-foot cone",
     "description": {
-      "main": "You draw blood and life force from creatures and shoot it out through your outstretched arms. You deal 10d6 negative damage to living creatures in the area, based on their Fortitude saves. You gain half as many Hit Points as the maximum damage done to any single creature affected by this spell.",
+      "main": "You draw blood and life force from creatures and shoot it out through your outstretched arms. You deal 13d6 negative damage to living creatures in the area, based on their Fortitude saves. You gain half as many Hit Points as the maximum damage done to any single creature affected by this spell.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage.",
@@ -6778,7 +6778,7 @@
     "casting": [ "aS", "aV" ],
     "range": "touch",
     "target": "one living creature",
-    "description": { "main": "You deal 3d6 negative damage to the target (double damage on a critical hit). You gain temporary Hit Points equal to the negative damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute." },
+    "description": { "main": "You deal 4d6 negative damage to the target (double damage on a critical hit). You gain temporary Hit Points equal to the negative damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute." },
     "heightened": { "+1": "The damage increases by 1d6." }
   },
   "veil": {
@@ -6859,7 +6859,7 @@
     "area": "30-foot burst",
     "duration": "1 minute",
     "description": {
-      "main": "An illusion of horrific otherworldly creatures appears within the spell\u2019s area. The creatures look like Tiny swarming monsters, with a specific appearance of your choice, such as hellish flies or animated saw blades. Any creature that\u2019s inside the burst when it\u2019s created, enters the burst, or ends its turn inside the burst must attempt a Will save to avoid taking 8d8 mental damage. A creature that tries to Interact with the monsters or observes one with a Seek action can attempt to disbelieve the illusion.",
+      "main": "An illusion of horrific otherworldly creatures appears within the spell\u2019s area. The creatures look like Tiny swarming monsters, with a specific appearance of your choice, such as hellish flies or animated saw blades. Any creature that\u2019s inside the burst when it\u2019s created, enters the burst, or ends its turn inside the burst must attempt a Will save to avoid taking 11d8 mental damage. A creature that tries to Interact with the monsters or observes one with a Seek action can attempt to disbelieve the illusion.",
       "subsections": {
         "success": "Half damage.",
         "crit": "No damage, and the target can immediately attempt to disbelieve.",
@@ -6879,7 +6879,7 @@
     "range": "120 feet",
     "area": "5-foot radius, 80-foot-tall cylinder",
     "description": {
-      "main": "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 13d6 fire damage. Creatures in the area must attempt a Reflex save or take 13d6 fire damage. The lava rapidly cools, and creatures in the area might become partially encased in rock depending on their Reflex saves. A creature encased in rock is sluggish 1, is hampered 5 feet, and when flying treats all normal terrain as difficult terrain. A flying creature immediately descends 20 feet the moment it\u2019s encased, but doesn\u2019t take falling damage from this movement. A creature encased in rock can attempt to Break Open or Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock. Additionally, creatures in the area that critically succeed at their saves and creature that are within 5 feet of the lava column automatically takes 2d6 fire damage from the intense heat.",
+      "main": "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 17d6 fire damage. Creatures in the area must attempt a Reflex save or take 17d6 fire damage. The lava rapidly cools, and creatures in the area might become partially encased in rock depending on their Reflex saves. A creature encased in rock is sluggish 1, is hampered 5 feet, and when flying treats all normal terrain as difficult terrain. A flying creature immediately descends 20 feet the moment it\u2019s encased, but doesn\u2019t take falling damage from this movement. A creature encased in rock can attempt to Break Open or Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock. Additionally, creatures in the area that critically succeed at their saves and creature that are within 5 feet of the lava column automatically takes 2d6 fire damage from the intense heat.",
       "subsections": {
         "success": "Half damage and not encased.",
         "crit": "No damage and not encased.",
@@ -6918,7 +6918,7 @@
     "casting": [ "aS", "aV" ],
     "area": "40-foot aura; Targets any number of creatures",
     "description": {
-      "main": "Your scream chills the souls of enemies that hear it. Each living enemy in the burst takes 5d10 damage and is drained 1d4, depending on its Fortitude save.",
+      "main": "Your scream chills the souls of enemies that hear it. Each living enemy in the burst takes 9d10 damage and is drained 1d4, depending on its Fortitude save.",
       "subsections": {
         "success": "Full damage and no drain.",
         "crit": "No damage or drain.",
@@ -6945,7 +6945,7 @@
     "casting": [ "aM", "aS", "aV" ],
     "range": "120 feet",
     "duration": "1 minute",
-    "description": { "main": "You create either a 5-foot-thick, 60-foot-long, 10-foot-high wall of flame in a straight line or a 5-foot-thick, 10-foot-radius ring of flame. The wall stands vertically in either form if you wish, the wall can be of a shorter length or height. Everything on each side of the wall is concealed from creatures on the opposite side. Any creature crossing the wall or occupying the wall\u2019s area at the start of its turn takes 3d6 fire damage." },
+    "description": { "main": "You create either a 5-foot-thick, 60-foot-long, 10-foot-high wall of flame in a straight line or a 5-foot-thick, 10-foot-radius ring of flame. The wall stands vertically in either form if you wish, the wall can be of a shorter length or height. Everything on each side of the wall is concealed from creatures on the opposite side. Any creature crossing the wall or occupying the wall\u2019s area at the start of its turn takes 4d6 fire damage." },
     "heightened": { "+1": "The fire damage increases by 1d6." }
   },
   "wall-of-force": {
@@ -6992,7 +6992,7 @@
     "casting": [ "aM", "aS", "aV" ],
     "range": "60 feet",
     "duration": "1 minute",
-    "description": { "main": "You create a 5-foot-thick, 60-foot-long, and 10-foot-high wall of brambles and thorns in a straight line. The wall stands vertically. If you wish, the wall can be of a shorter length or height. Everything on each side of the wall has cover from creatures on the opposite side, and the wall\u2019s space counts as difficult terrain. For every move action a creature uses that enters at least one of the wall\u2019s spaces, that creature takes 3d4 piercing damage. Each 5-foot-by-5-foot section of the wall has AC 10, TAC 6, and Hardness 9. A broken section can be moved through freely." },
+    "description": { "main": "You create a 5-foot-thick, 60-foot-long, and 10-foot-high wall of brambles and thorns in a straight line. The wall stands vertically. If you wish, the wall can be of a shorter length or height. Everything on each side of the wall has cover from creatures on the opposite side, and the wall\u2019s space counts as difficult terrain. For every move action a creature uses that enters at least one of the wall\u2019s spaces, that creature takes 4d4 piercing damage. Each 5-foot-by-5-foot section of the wall has AC 10, TAC 6, and Hardness 9. A broken section can be moved through freely." },
     "heightened": { "+1": "The Hardness of each section of the wall increases by 2 and the piercing damage increases by 1d4." }
   },
   "wall-of-wind": {
@@ -7136,7 +7136,7 @@
     "casting": [ "aS", "aV" ],
     "area": "30-foot cone or 10-foot aura",
     "description": {
-      "main": "Your Somatic Casting action for this spell is a swing with one weapon you\u2019re holding that you\u2019re trained with, so you can use the Somatic Casting action even if you don\u2019t have a hand free. The weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an aura, dealing four dice of damage to creatures in the area. This damage has the same type as the chosen weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you\u2019d use its two-hand damage die. Each creature in the area must attempt a Reflex save.",
+      "main": "Your Somatic Casting action for this spell is a swing with one weapon you\u2019re holding that you\u2019re trained with, so you can use the Somatic Casting action even if you don\u2019t have a hand free. The weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an aura, dealing five dice of damage to creatures in the area. This damage has the same type as the chosen weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you\u2019d use its two-hand damage die. Each creature in the area must attempt a Reflex save.",
       "subsections": {
         "success": "Half damage.",
         "crit": "Unaffected.",
@@ -7189,7 +7189,7 @@
       "main": "You fill the targets\u2019 minds with terrifying images of fearsome creatures, each drawn from the target\u2019s worst fears. Only the targets can see their assailants. For each target, the effects of the weird are based on the target\u2019s Will saving throw. It must attempt a Fortitude saving throw. On a successful Fortitude save, the target still takes the effects of Failure above and is fleeing until the end of its next turn. If if fails, it is reduced to 0 Hit Points and dies.",
       "subsections": {
         "success": "Unaffected.",
-        "failure": "The target takes 16d6 mental damage and is frightened 2.",
+        "failure": "The target takes 21d6 mental damage and is frightened 2.",
         "crit-fail": "The target is so afraid, it might instantly die."
       }
     }
