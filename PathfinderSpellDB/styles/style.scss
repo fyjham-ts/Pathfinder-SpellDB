@@ -307,6 +307,19 @@ $uniqueRarity: #25408f;
 
     .card-body {
         padding: 0.5rem;
+
+        .card-subheading {
+            padding: 5px 0 5px 10px;
+
+            .card-subheading-title {
+                font-weight: bold;
+
+                &::after {
+                    content: ": ";
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
 .spellListConfig {
